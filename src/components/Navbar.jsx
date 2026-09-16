@@ -1,0 +1,166 @@
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Menu, X, Phone } from 'lucide-react';
+
+export default function Navbar({ onOpenBooking }) {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: "HOME", href: "#hero" },
+    { name: "ABOUT", href: "#about" },
+    { name: "PROGRAMS", href: "#programs" },
+    { name: "COACHES", href: "#coaches" },
+    { name: "GALLERY", href: "#gallery" },
+    { name: "CONTACT", href: "#contact" },
+  ];
+
+  return (
+    <>
+      <header
+        className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
+          scrolled
+            ? "bg-[#050505]/90 backdrop-blur-md py-3.5 border-b border-white/10 shadow-2xl"
+            : "bg-gradient-to-b from-black/80 via-black/30 to-transparent py-5 sm:py-6"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+          {/* Brand Logo & Title */}
+          <a
+            href="#hero"
+            className="flex items-center gap-3.5 group relative"
+            aria-label="Lion Elite Tennis Academy Home"
+          >
+            <div className="relative w-11 h-11 sm:w-12 sm:h-12 overflow-hidden rounded-full border border-[#276B0B]/30 p-0.5 bg-[#050505] transition-transform duration-300 group-hover:border-[#276B0B]">
+              <img
+                src="/assets/logo.png"
+                alt="Lion Elite Tennis Academy Emblem"
+                className="w-full h-full object-cover rounded-full"
+              />
+            </div>
+            <div className="flex flex-col">
+              <span className="font-display text-lg sm:text-xl font-bold tracking-wider text-white uppercase leading-tight group-hover:text-[#276B0B] transition-colors">
+                LION ELITE
+              </span>
+              <span className="font-mono text-[9px] sm:text-[10px] tracking-widest text-[#B9B9B9] uppercase leading-none">
+                TENNIS ACADEMY // DUBAI
+              </span>
+            </div>
+          </a>
+
+          {/* Desktop Navigation Links */}
+          <nav className="hidden lg:flex items-center gap-8" aria-label="Main Navigation">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="relative font-display text-sm tracking-wider uppercase text-[#B9B9B9] hover:text-white transition-colors duration-200 py-1 group"
+              >
+                <span>{link.name}</span>
+                {/* Court-line hover interaction */}
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#276B0B] transition-all duration-300 group-hover:w-full" />
+              </a>
+            ))}
+          </nav>
+
+          {/* Right Action CTA */}
+          <div className="hidden sm:flex items-center gap-4">
+            <a
+              href="https://wa.me/971500000000"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden xl:flex items-center gap-2 text-xs font-mono text-[#B9B9B9] hover:text-[#276B0B] transition-colors py-1.5 px-2.5 border border-white/10 hover:border-[#276B0B]/40"
+              title="Quick WhatsApp Chat"
+            >
+              <Phone className="w-3.5 h-3.5 text-[#276B0B]" />
+              <span>+971 4 800 8366</span>
+            </a>
+
+            <button
+              type="button"
+              onClick={onOpenBooking}
+              className="relative inline-flex items-center gap-2.5 px-5 py-2.5 bg-[#276B0B] text-white font-display text-xs sm:text-sm font-bold tracking-wider uppercase transition-all duration-200 hover:bg-white hover:text-[#050505] active:scale-95 group shadow-sm"
+            >
+              <span>BOOK A SESSION</span>
+              <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+              {/* Corner court mark */}
+              <span className="absolute top-0 right-0 w-1.5 h-1.5 border-t border-r border-white" />
+            </button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden p-2 text-white hover:text-[#276B0B] transition-colors"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile Drawer */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="fixed inset-0 z-30 bg-[#050505]/95 backdrop-blur-xl pt-24 px-6 flex flex-col justify-between pb-10 lg:hidden"
+          >
+            <div className="space-y-6">
+              <div className="font-mono text-xs text-[#276B0B] tracking-widest uppercase mb-4 pb-2 border-b border-white/10">
+                NAVIGATION // COURT MENU
+              </div>
+              <div className="flex flex-col space-y-4">
+                {navLinks.map((link, idx) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="font-display text-2xl tracking-wider uppercase text-white hover:text-[#276B0B] transition-colors flex items-center justify-between border-b border-white/5 pb-2"
+                  >
+                    <span>{link.name}</span>
+                    <span className="font-mono text-xs text-[#276B0B]">0{idx + 1}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-4 pt-6">
+              <button
+                type="button"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onOpenBooking();
+                }}
+                className="w-full flex items-center justify-center gap-3 py-4 bg-[#276B0B] text-white font-display text-base font-bold tracking-wider uppercase"
+              >
+                BOOK A SESSION NOW
+                <ArrowRight className="w-5 h-5" />
+              </button>
+
+              <div className="text-center font-mono text-[11px] text-[#B9B9B9] pt-2">
+                DUBAI, UNITED ARAB EMIRATES • +971 4 800 8366
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}
