@@ -41,7 +41,7 @@ export default function Footer({ onOpenBooking }) {
         {/* Top Tier: Huge Architectural Branding & Logo */}
         <div className="pb-16 border-b border-white/10 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
           <div className="flex items-center gap-6">
-            <div className="h-28 sm:h-36 lg:h-44 shrink-0">
+            <div className="h-16 sm:h-28 md:h-36 lg:h-44 shrink-0">
               <img
                 src="/logo.png"
                 alt="Lion Elite Tennis Academy Logo"

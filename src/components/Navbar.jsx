@@ -48,7 +48,7 @@ export default function Navbar({ onOpenBooking }) {
               src="/logo.png"
               alt="Lion Elite Tennis Academy Logo"
               className={`w-auto object-contain transition-all duration-300 group-hover:scale-105 ${
-                scrolled ? "h-14 sm:h-16" : "h-18 sm:h-22 lg:h-24"
+                scrolled ? "h-8 sm:h-12 md:h-14" : "h-10 sm:h-16 md:h-20 lg:h-22"
               }`}
             />
           </a>
