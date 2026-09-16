@@ -49,14 +49,14 @@ export default function BookingModal({ isOpen, onClose, preselectedProgramId }) 
           className="relative w-full max-w-2xl bg-[#0D0D0D] border border-white/10 shadow-2xl z-10 my-8 overflow-hidden"
         >
           {/* Top Court Accent Line */}
-          <div className="h-1 w-full bg-gradient-to-r from-[#276B0B] via-[#276B0B] to-[#276B0B]" />
+          <div className="h-1 w-full bg-gradient-to-r from-[#8DF000] via-[#8DF000] to-[#8DF000]" />
 
           {/* Header */}
           <div className="p-6 sm:p-8 border-b border-white/10 flex items-start justify-between bg-[#111111]">
             <div>
               <div className="flex items-center gap-2 mb-1.5">
-                <span className="inline-block w-2 h-2 bg-[#276B0B]" />
-                <span className="font-mono text-xs text-[#276B0B] tracking-widest uppercase">
+                <span className="inline-block w-2 h-2 bg-[#8DF000]" />
+                <span className="font-mono text-xs text-[#8DF000] tracking-widest uppercase">
                   RESERVATION DESK // DUBAI
                 </span>
               </div>
@@ -81,8 +81,8 @@ export default function BookingModal({ isOpen, onClose, preselectedProgramId }) 
           <div className="p-6 sm:p-8 max-h-[75vh] overflow-y-auto">
             {submitted ? (
               <div className="py-10 text-center">
-                <div className="w-16 h-16 bg-[#276B0B]/10 border border-[#276B0B] flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle2 className="w-8 h-8 text-[#276B0B]" />
+                <div className="w-16 h-16 bg-[#8DF000]/10 border border-[#8DF000] flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle2 className="w-8 h-8 text-[#8DF000]" />
                 </div>
                 <h3 className="font-display text-2xl sm:text-3xl text-white tracking-wide uppercase mb-2">
                   Session Request Confirmed
@@ -108,14 +108,14 @@ export default function BookingModal({ isOpen, onClose, preselectedProgramId }) 
                   </div>
                   <div className="flex justify-between text-[#B9B9B9]">
                     <span>SLOT:</span>
-                    <span className="text-[#276B0B]">{formData.preferredTime}</span>
+                    <span className="text-[#8DF000]">{formData.preferredTime}</span>
                   </div>
                 </div>
 
                 <button
                   type="button"
                   onClick={handleReset}
-                  className="inline-flex items-center gap-3 px-8 py-3.5 bg-[#276B0B] text-white font-display text-sm tracking-wider uppercase font-bold hover:bg-white transition-colors"
+                  className="inline-flex items-center gap-3 px-8 py-3.5 bg-[#8DF000] text-white font-display text-sm tracking-wider uppercase font-bold hover:bg-white transition-colors"
                 >
                   Done // Return to Court
                 </button>
@@ -135,14 +135,14 @@ export default function BookingModal({ isOpen, onClose, preselectedProgramId }) 
                         onClick={() => setSelectedProgram(prog.id)}
                         className={`text-left p-3 border transition-all text-xs flex flex-col justify-between ${
                           selectedProgram === prog.id
-                            ? "bg-[#276B0B]/10 border-[#276B0B] text-white shadow-sm"
+                            ? "bg-[#8DF000]/10 border-[#8DF000] text-white shadow-sm"
                             : "bg-[#151515] border-white/5 text-[#B9B9B9] hover:border-white/20 hover:text-white"
                         }`}
                       >
                         <div className="flex items-center justify-between mb-1">
-                          <span className="font-mono text-[10px] text-[#276B0B]">{prog.number}</span>
+                          <span className="font-mono text-[10px] text-[#8DF000]">{prog.number}</span>
                           {selectedProgram === prog.id && (
-                            <span className="w-1.5 h-1.5 bg-[#276B0B]" />
+                            <span className="w-1.5 h-1.5 bg-[#8DF000]" />
                           )}
                         </div>
                         <span className="font-display text-sm font-semibold tracking-wide uppercase text-white">
@@ -169,7 +169,7 @@ export default function BookingModal({ isOpen, onClose, preselectedProgramId }) 
                         onClick={() => setSkillLevel(lvl)}
                         className={`py-2 px-3 border text-center text-xs font-sans transition-all ${
                           skillLevel === lvl
-                            ? "bg-[#276B0B] border-[#276B0B] text-[#050505] font-semibold"
+                            ? "bg-[#8DF000] border-[#8DF000] text-[#050505] font-semibold"
                             : "bg-[#151515] border-white/10 text-[#B9B9B9] hover:text-white hover:border-white/25"
                         }`}
                       >
@@ -192,7 +192,7 @@ export default function BookingModal({ isOpen, onClose, preselectedProgramId }) 
                         placeholder="e.g. Tariq Al-Hashimi"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full bg-[#151515] border border-white/10 px-3.5 py-2.5 text-xs text-white placeholder-neutral-600 focus:outline-none focus:border-[#276B0B] font-sans"
+                        className="w-full bg-[#151515] border border-white/10 px-3.5 py-2.5 text-xs text-white placeholder-neutral-600 focus:outline-none focus:border-[#8DF000] font-sans"
                       />
                       <User className="absolute right-3 top-3 w-4 h-4 text-neutral-500" />
                     </div>
@@ -209,7 +209,7 @@ export default function BookingModal({ isOpen, onClose, preselectedProgramId }) 
                         placeholder="+971 50 000 0000"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full bg-[#151515] border border-white/10 px-3.5 py-2.5 text-xs text-white placeholder-neutral-600 focus:outline-none focus:border-[#276B0B] font-sans"
+                        className="w-full bg-[#151515] border border-white/10 px-3.5 py-2.5 text-xs text-white placeholder-neutral-600 focus:outline-none focus:border-[#8DF000] font-sans"
                       />
                       <Phone className="absolute right-3 top-3 w-4 h-4 text-neutral-500" />
                     </div>
@@ -228,7 +228,7 @@ export default function BookingModal({ isOpen, onClose, preselectedProgramId }) 
                         placeholder="player@example.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full bg-[#151515] border border-white/10 px-3.5 py-2.5 text-xs text-white placeholder-neutral-600 focus:outline-none focus:border-[#276B0B] font-sans"
+                        className="w-full bg-[#151515] border border-white/10 px-3.5 py-2.5 text-xs text-white placeholder-neutral-600 focus:outline-none focus:border-[#8DF000] font-sans"
                       />
                       <Mail className="absolute right-3 top-3 w-4 h-4 text-neutral-500" />
                     </div>
@@ -241,7 +241,7 @@ export default function BookingModal({ isOpen, onClose, preselectedProgramId }) 
                     <select
                       value={formData.courtLocation}
                       onChange={(e) => setFormData({ ...formData, courtLocation: e.target.value })}
-                      className="w-full bg-[#151515] border border-white/10 px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-[#276B0B] font-sans cursor-pointer"
+                      className="w-full bg-[#151515] border border-white/10 px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-[#8DF000] font-sans cursor-pointer"
                     >
                       <option value="Dubai Sports City (Center Courts)">Dubai Sports City (Center Courts)</option>
                       <option value="Jumeirah Golf Estates Academy">Jumeirah Golf Estates Academy</option>
@@ -268,11 +268,11 @@ export default function BookingModal({ isOpen, onClose, preselectedProgramId }) 
                         onClick={() => setFormData({ ...formData, preferredTime: slot })}
                         className={`p-2.5 border text-xs text-left transition-all ${
                           formData.preferredTime === slot
-                            ? "border-[#276B0B] bg-[#276B0B]/10 text-white font-medium"
+                            ? "border-[#8DF000] bg-[#8DF000]/10 text-white font-medium"
                             : "border-white/10 bg-[#151515] text-[#B9B9B9] hover:border-white/25"
                         }`}
                       >
-                        <Clock className="w-3.5 h-3.5 text-[#276B0B] mb-1" />
+                        <Clock className="w-3.5 h-3.5 text-[#8DF000] mb-1" />
                         <span className="text-[11px] block">{slot}</span>
                       </button>
                     ))}
@@ -283,7 +283,7 @@ export default function BookingModal({ isOpen, onClose, preselectedProgramId }) 
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-[#276B0B] hover:bg-white text-[#050505] font-display text-base tracking-wider uppercase font-bold transition-all shadow-lg shadow-[#276B0B]/10"
+                    className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-[#8DF000] hover:bg-white text-[#050505] font-display text-base tracking-wider uppercase font-bold transition-all shadow-lg shadow-[#8DF000]/10"
                   >
                     Confirm Session Evaluation Request
                     <ArrowRight className="w-5 h-5" />

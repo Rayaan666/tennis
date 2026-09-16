@@ -26,7 +26,7 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#050505] text-[#F5F5F0] overflow-x-hidden selection:bg-[#276B0B] selection:text-[#050505]">
+    <div className="relative min-h-screen bg-[#050505] text-[#F0F4F8] overflow-x-hidden selection:bg-[#8DF000] selection:text-[#050505]">
       {/* Navigation */}
       <Navbar onOpenBooking={() => handleOpenBooking("junior-dev")} />
 

@@ -50,7 +50,7 @@ export default function HeroSection({ onOpenBooking }) {
             y1="720"
             x2="1440"
             y2="720"
-            stroke="rgba(255, 255, 255, 0.08)"
+            stroke="rgba(240, 244, 248, 0.08)"
             strokeWidth="1.5"
           />
 
@@ -68,7 +68,7 @@ export default function HeroSection({ onOpenBooking }) {
           {/* Moving Tennis Ball along trajectory */}
           <motion.circle
             r="4.5"
-            fill="#276B0B"
+            fill="#8DF000"
             initial={{ cx: -20, cy: 820, opacity: 0 }}
             animate={{
               cx: [0, 420, 850, 1440],
@@ -85,9 +85,9 @@ export default function HeroSection({ onOpenBooking }) {
 
           <defs>
             <linearGradient id="trajectory-gradient" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="#276B0B" stopOpacity="0.2" />
-              <stop offset="50%" stopColor="#276B0B" stopOpacity="0.8" />
-              <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.4" />
+              <stop offset="0%" stopColor="#8DF000" stopOpacity="0.2" />
+              <stop offset="50%" stopColor="#8DF000" stopOpacity="0.8" />
+              <stop offset="100%" stopColor="#F0F4F8" stopOpacity="0.4" />
             </linearGradient>
           </defs>
         </svg>
@@ -103,8 +103,8 @@ export default function HeroSection({ onOpenBooking }) {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="flex items-center gap-3 mb-6"
           >
-            <span className="w-8 h-[2px] bg-[#276B0B]" />
-            <span className="font-mono text-xs sm:text-sm tracking-court uppercase text-[#276B0B] font-semibold">
+            <span className="w-8 h-[2px] bg-[#8DF000]" />
+            <span className="font-mono text-xs sm:text-sm tracking-court uppercase text-[#8DF000] font-semibold">
               LION ELITE TENNIS ACADEMY // MIDDLE EAST
             </span>
             <span className="hidden sm:inline-block font-mono text-[11px] text-[#B9B9B9]/60 tracking-widest">
@@ -134,7 +134,7 @@ export default function HeroSection({ onOpenBooking }) {
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               transition={{ duration: 0.8, delay: 0.54, ease: [0.16, 1, 0.3, 1] }}
-              className="block overflow-hidden text-[#276B0B]"
+              className="block overflow-hidden text-[#8DF000]"
             >
               POINT.
             </motion.span>
@@ -145,7 +145,7 @@ export default function HeroSection({ onOpenBooking }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="font-sans text-base sm:text-lg md:text-xl text-[#F5F5F0]/85 font-normal max-w-2xl leading-relaxed mb-10"
+            className="font-sans text-base sm:text-lg md:text-xl text-[#F0F4F8]/85 font-normal max-w-2xl leading-relaxed mb-10"
           >
             Professional tennis coaching in Dubai designed to develop stronger technique, smarter match play and confident competitors — from first serve to tournament level.
           </motion.p>
@@ -160,7 +160,7 @@ export default function HeroSection({ onOpenBooking }) {
             <button
               type="button"
               onClick={onOpenBooking}
-              className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#276B0B] text-white font-display text-base font-bold tracking-wider uppercase transition-all duration-300 hover:bg-white hover:text-[#050505] active:scale-98 shadow-xl shadow-[#276B0B]/20"
+              className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#8DF000] text-white font-display text-base font-bold tracking-wider uppercase transition-all duration-300 hover:bg-white hover:text-[#050505] active:scale-98 shadow-xl shadow-[#8DF000]/20"
             >
               <span>BOOK A TRAINING SESSION</span>
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1.5" />
@@ -170,10 +170,10 @@ export default function HeroSection({ onOpenBooking }) {
 
             <a
               href="#programs"
-              className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 text-white font-display text-base font-bold tracking-wider uppercase transition-all duration-300 hover:border-[#276B0B] hover:text-[#276B0B] hover:bg-white/[0.02]"
+              className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 text-white font-display text-base font-bold tracking-wider uppercase transition-all duration-300 hover:border-[#8DF000] hover:text-[#8DF000] hover:bg-white/[0.02]"
             >
               <span>EXPLORE PROGRAMS</span>
-              <span className="w-1.5 h-1.5 bg-[#276B0B] rounded-full group-hover:scale-125 transition-transform" />
+              <span className="w-1.5 h-1.5 bg-[#8DF000] rounded-full group-hover:scale-125 transition-transform" />
             </a>
           </motion.div>
         </div>
@@ -184,15 +184,15 @@ export default function HeroSection({ onOpenBooking }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Category Badges Strip */}
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-1 font-mono text-[11px] sm:text-xs text-[#B9B9B9] tracking-wider uppercase">
-            <span className="text-white hover:text-[#276B0B] transition-colors">JUNIORS</span>
+            <span className="text-white hover:text-[#8DF000] transition-colors">JUNIORS</span>
             <span className="text-neutral-600">/</span>
-            <span className="text-white hover:text-[#276B0B] transition-colors">ADULTS</span>
+            <span className="text-white hover:text-[#8DF000] transition-colors">ADULTS</span>
             <span className="text-neutral-600">/</span>
-            <span className="text-white hover:text-[#276B0B] transition-colors">PRIVATE COACHING</span>
+            <span className="text-white hover:text-[#8DF000] transition-colors">PRIVATE COACHING</span>
             <span className="text-neutral-600">/</span>
-            <span className="text-white hover:text-[#276B0B] transition-colors">PERFORMANCE TRAINING</span>
+            <span className="text-white hover:text-[#8DF000] transition-colors">PERFORMANCE TRAINING</span>
             <span className="text-neutral-600">/</span>
-            <span className="text-[#276B0B] font-semibold">DUBAI</span>
+            <span className="text-[#8DF000] font-semibold">DUBAI</span>
           </div>
 
           {/* Scroll Down Indicator */}
@@ -201,7 +201,7 @@ export default function HeroSection({ onOpenBooking }) {
             className="flex items-center gap-2 font-mono text-[11px] text-[#B9B9B9] hover:text-white uppercase tracking-widest transition-colors group"
           >
             <span>SCROLL TO ENTER THE COURT</span>
-            <ChevronDown className="w-3.5 h-3.5 text-[#276B0B] transition-transform duration-300 group-hover:translate-y-1" />
+            <ChevronDown className="w-3.5 h-3.5 text-[#8DF000] transition-transform duration-300 group-hover:translate-y-1" />
           </a>
         </div>
       </div>

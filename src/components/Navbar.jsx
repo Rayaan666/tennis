@@ -38,27 +38,19 @@ export default function Navbar({ onOpenBooking }) {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Brand Logo & Title */}
+          {/* Brand Logo */}
           <a
             href="#hero"
-            className="flex items-center gap-3.5 group relative"
+            className="flex items-center group relative"
             aria-label="Lion Elite Tennis Academy Home"
           >
-            <div className="relative w-11 h-11 sm:w-12 sm:h-12 overflow-hidden rounded-full border border-[#276B0B]/30 p-0.5 bg-[#050505] transition-transform duration-300 group-hover:border-[#276B0B]">
-              <img
-                src="/assets/logo.png"
-                alt="Lion Elite Tennis Academy Emblem"
-                className="w-full h-full object-cover rounded-full"
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-display text-lg sm:text-xl font-bold tracking-wider text-white uppercase leading-tight group-hover:text-[#276B0B] transition-colors">
-                LION ELITE
-              </span>
-              <span className="font-mono text-[9px] sm:text-[10px] tracking-widest text-[#B9B9B9] uppercase leading-none">
-                TENNIS ACADEMY // DUBAI
-              </span>
-            </div>
+            <img
+              src="/logo.png"
+              alt="Lion Elite Tennis Academy Logo"
+              className={`w-auto object-contain transition-all duration-300 group-hover:scale-105 ${
+                scrolled ? "h-14 sm:h-16" : "h-18 sm:h-22 lg:h-24"
+              }`}
+            />
           </a>
 
           {/* Desktop Navigation Links */}
@@ -71,7 +63,7 @@ export default function Navbar({ onOpenBooking }) {
               >
                 <span>{link.name}</span>
                 {/* Court-line hover interaction */}
-                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#276B0B] transition-all duration-300 group-hover:w-full" />
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#8DF000] transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
           </nav>
@@ -82,17 +74,17 @@ export default function Navbar({ onOpenBooking }) {
               href="https://wa.me/971500000000"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden xl:flex items-center gap-2 text-xs font-mono text-[#B9B9B9] hover:text-[#276B0B] transition-colors py-1.5 px-2.5 border border-white/10 hover:border-[#276B0B]/40"
+              className="hidden xl:flex items-center gap-2 text-xs font-mono text-[#B9B9B9] hover:text-[#8DF000] transition-colors py-1.5 px-2.5 border border-white/10 hover:border-[#8DF000]/40"
               title="Quick WhatsApp Chat"
             >
-              <Phone className="w-3.5 h-3.5 text-[#276B0B]" />
+              <Phone className="w-3.5 h-3.5 text-[#8DF000]" />
               <span>+971 4 800 8366</span>
             </a>
 
             <button
               type="button"
               onClick={onOpenBooking}
-              className="relative inline-flex items-center gap-2.5 px-5 py-2.5 bg-[#276B0B] text-white font-display text-xs sm:text-sm font-bold tracking-wider uppercase transition-all duration-200 hover:bg-white hover:text-[#050505] active:scale-95 group shadow-sm"
+              className="relative inline-flex items-center gap-2.5 px-5 py-2.5 bg-[#8DF000] text-white font-display text-xs sm:text-sm font-bold tracking-wider uppercase transition-all duration-200 hover:bg-white hover:text-[#050505] active:scale-95 group shadow-sm"
             >
               <span>BOOK A SESSION</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -105,7 +97,7 @@ export default function Navbar({ onOpenBooking }) {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-white hover:text-[#276B0B] transition-colors"
+            className="lg:hidden p-2 text-white hover:text-[#8DF000] transition-colors"
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -123,7 +115,7 @@ export default function Navbar({ onOpenBooking }) {
             className="fixed inset-0 z-30 bg-[#050505]/95 backdrop-blur-xl pt-24 px-6 flex flex-col justify-between pb-10 lg:hidden"
           >
             <div className="space-y-6">
-              <div className="font-mono text-xs text-[#276B0B] tracking-widest uppercase mb-4 pb-2 border-b border-white/10">
+              <div className="font-mono text-xs text-[#8DF000] tracking-widest uppercase mb-4 pb-2 border-b border-white/10">
                 NAVIGATION // COURT MENU
               </div>
               <div className="flex flex-col space-y-4">
@@ -132,10 +124,10 @@ export default function Navbar({ onOpenBooking }) {
                     key={link.name}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="font-display text-2xl tracking-wider uppercase text-white hover:text-[#276B0B] transition-colors flex items-center justify-between border-b border-white/5 pb-2"
+                    className="font-display text-2xl tracking-wider uppercase text-white hover:text-[#8DF000] transition-colors flex items-center justify-between border-b border-white/5 pb-2"
                   >
                     <span>{link.name}</span>
-                    <span className="font-mono text-xs text-[#276B0B]">0{idx + 1}</span>
+                    <span className="font-mono text-xs text-[#8DF000]">0{idx + 1}</span>
                   </a>
                 ))}
               </div>
@@ -148,7 +140,7 @@ export default function Navbar({ onOpenBooking }) {
                   setMobileMenuOpen(false);
                   onOpenBooking();
                 }}
-                className="w-full flex items-center justify-center gap-3 py-4 bg-[#276B0B] text-white font-display text-base font-bold tracking-wider uppercase"
+                className="w-full flex items-center justify-center gap-3 py-4 bg-[#8DF000] text-white font-display text-base font-bold tracking-wider uppercase"
               >
                 BOOK A SESSION NOW
                 <ArrowRight className="w-5 h-5" />

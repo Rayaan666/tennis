@@ -9,7 +9,7 @@ export default function GallerySection({ onOpenBooking }) {
   return (
     <section
       id="gallery"
-      className="relative w-full bg-[#050505] text-[#F5F5F0] py-12 sm:py-16 lg:py-20 overflow-hidden border-t border-white/10"
+      className="relative w-full bg-[#050505] text-[#F0F4F8] py-12 sm:py-16 lg:py-20 overflow-hidden border-t-[3px] border-[#8DF000]"
     >
       {/* Background Graphic Grid */}
       <div className="absolute inset-0 court-grid-pattern opacity-20 pointer-events-none" />
@@ -20,13 +20,13 @@ export default function GallerySection({ onOpenBooking }) {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 gap-6">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="w-6 h-[2px] bg-[#276B0B]" />
-              <span className="font-mono text-xs tracking-court uppercase text-[#276B0B] font-semibold">
+              <span className="w-6 h-[2px] bg-[#8DF000]" />
+              <span className="font-mono text-xs tracking-court uppercase text-[#8DF000] font-semibold">
                 05 / ACADEMY LIFE
               </span>
             </div>
             <h2 className="font-display font-black text-5xl sm:text-7xl lg:text-8xl tracking-tighter uppercase text-white leading-none">
-              INSIDE <span className="text-[#276B0B]">THE LINES.</span>
+              INSIDE <span className="text-[#8DF000]">THE LINES.</span>
             </h2>
           </div>
 
@@ -37,7 +37,7 @@ export default function GallerySection({ onOpenBooking }) {
             <button
               type="button"
               onClick={onOpenBooking}
-              className="inline-flex items-center gap-2 px-6 py-3.5 bg-white/10 hover:bg-[#276B0B] text-white hover:text-[#050505] font-display text-xs font-bold uppercase tracking-wider transition-colors border border-white/10 hover:border-[#276B0B]"
+              className="inline-flex items-center gap-2 px-6 py-3.5 bg-white/10 hover:bg-[#8DF000] text-white hover:text-[#050505] font-display text-xs font-bold uppercase tracking-wider transition-colors border border-white/10 hover:border-[#8DF000]"
             >
               <span>VIEW THE ACADEMY</span>
               <ArrowRight className="w-4 h-4" />
@@ -60,12 +60,12 @@ export default function GallerySection({ onOpenBooking }) {
               loading="lazy"
             />
             {/* Number Tag */}
-            <div className="absolute top-4 left-4 bg-[#050505]/90 px-3 py-1 font-mono text-[10px] text-[#276B0B] uppercase tracking-wider border-l border-[#276B0B]">
+            <div className="absolute top-4 left-4 bg-[#050505]/90 px-3 py-1 font-mono text-[10px] text-[#8DF000] uppercase tracking-wider border-l border-[#8DF000]">
               PLATE 01 // HIGH SPEED MACRO
             </div>
             {/* Inset Hover Telemetry */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
-              <span className="font-mono text-xs text-[#276B0B] uppercase tracking-widest">{galleryItems[0].specs.shutter} • {galleryItems[0].specs.focal}</span>
+              <span className="font-mono text-xs text-[#8DF000] uppercase tracking-widest">{galleryItems[0].specs.shutter} • {galleryItems[0].specs.focal}</span>
               <h4 className="font-display text-2xl uppercase font-bold text-white tracking-wide">{galleryItems[0].title}</h4>
               <p className="text-xs text-neutral-300 font-sans mt-1">{galleryItems[0].subtitle}</p>
             </div>
@@ -82,11 +82,11 @@ export default function GallerySection({ onOpenBooking }) {
               className="w-full h-full object-cover filter contrast-110 brightness-95 group-hover:scale-105 transition-transform duration-700 ease-out"
               loading="lazy"
             />
-            <div className="absolute top-4 left-4 bg-[#050505]/90 px-3 py-1 font-mono text-[10px] text-[#276B0B] uppercase tracking-wider border-l border-[#276B0B]">
+            <div className="absolute top-4 left-4 bg-[#050505]/90 px-3 py-1 font-mono text-[10px] text-[#8DF000] uppercase tracking-wider border-l border-[#8DF000]">
               PLATE 02 // AERIAL PERSPECTIVE
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 flex flex-col justify-end">
-              <span className="font-mono text-xs text-[#276B0B] uppercase tracking-widest">{galleryItems[1].specs.location}</span>
+              <span className="font-mono text-xs text-[#8DF000] uppercase tracking-widest">{galleryItems[1].specs.location}</span>
               <h4 className="font-display text-2xl uppercase font-bold text-white tracking-wide">{galleryItems[1].title}</h4>
               <p className="text-xs text-neutral-300 font-sans mt-1">{galleryItems[1].subtitle}</p>
             </div>
@@ -103,7 +103,7 @@ export default function GallerySection({ onOpenBooking }) {
               className="w-full h-full object-cover filter contrast-105 brightness-95 group-hover:scale-105 transition-transform duration-700 ease-out"
               loading="lazy"
             />
-            <div className="absolute top-4 left-4 bg-[#050505]/90 px-3 py-1 font-mono text-[10px] text-[#276B0B] uppercase tracking-wider border-l border-[#276B0B]">
+            <div className="absolute top-4 left-4 bg-[#050505]/90 px-3 py-1 font-mono text-[10px] text-[#8DF000] uppercase tracking-wider border-l border-[#8DF000]">
               PLATE 03 // ACTION
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-end">
@@ -123,7 +123,7 @@ export default function GallerySection({ onOpenBooking }) {
               className="w-full h-full object-cover filter contrast-105 brightness-90 group-hover:scale-105 transition-transform duration-700 ease-out"
               loading="lazy"
             />
-            <div className="absolute top-4 left-4 bg-[#050505]/90 px-3 py-1 font-mono text-[10px] text-[#276B0B] uppercase tracking-wider border-l border-[#276B0B]">
+            <div className="absolute top-4 left-4 bg-[#050505]/90 px-3 py-1 font-mono text-[10px] text-[#8DF000] uppercase tracking-wider border-l border-[#8DF000]">
               PLATE 04 // NET DETAIL
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-end">
@@ -143,7 +143,7 @@ export default function GallerySection({ onOpenBooking }) {
               className="w-full h-full object-cover filter contrast-105 brightness-95 group-hover:scale-105 transition-transform duration-700 ease-out"
               loading="lazy"
             />
-            <div className="absolute top-4 left-4 bg-[#050505]/90 px-3 py-1 font-mono text-[10px] text-[#276B0B] uppercase tracking-wider border-l border-[#276B0B]">
+            <div className="absolute top-4 left-4 bg-[#050505]/90 px-3 py-1 font-mono text-[10px] text-[#8DF000] uppercase tracking-wider border-l border-[#8DF000]">
               PLATE 05 // ATMOSPHERE
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 flex flex-col justify-end">
@@ -168,7 +168,7 @@ export default function GallerySection({ onOpenBooking }) {
             >
               <button
                 onClick={() => setLightboxImage(null)}
-                className="absolute top-4 right-4 text-white hover:text-[#276B0B] p-2 bg-black/50"
+                className="absolute top-4 right-4 text-white hover:text-[#8DF000] p-2 bg-black/50"
                 aria-label="Close image preview"
               >
                 <X className="w-6 h-6" />
@@ -187,7 +187,7 @@ export default function GallerySection({ onOpenBooking }) {
                   <h4 className="font-display text-xl uppercase font-bold text-white">{lightboxImage.title}</h4>
                   <p className="text-neutral-400 font-sans text-xs">{lightboxImage.subtitle}</p>
                 </div>
-                <div className="text-right text-[#276B0B]">
+                <div className="text-right text-[#8DF000]">
                   <span>{lightboxImage.specs.location} // {lightboxImage.specs.shutter}</span>
                 </div>
               </div>

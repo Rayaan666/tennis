@@ -10,7 +10,7 @@ export default function ScoreboardSection({ onOpenBooking }) {
   return (
     <section
       id="scoreboard"
-      className="relative w-full bg-[#050505] text-[#F5F5F0] py-24 sm:py-32 lg:py-40 overflow-hidden border-t border-white/10"
+      className="relative w-full bg-[#050505] text-[#F0F4F8] py-24 sm:py-32 lg:py-40 overflow-hidden border-t-[3px] border-[#8DF000]"
     >
       {/* Electronic Scoreboard Background Grid & Line Movement */}
       <div className="absolute inset-0 court-grid-pattern opacity-20 pointer-events-none" />
@@ -24,18 +24,18 @@ export default function ScoreboardSection({ onOpenBooking }) {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 sm:mb-24 gap-6">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="w-6 h-[2px] bg-[#276B0B]" />
-              <span className="font-mono text-xs tracking-court uppercase text-[#276B0B] font-semibold">
+              <span className="w-6 h-[2px] bg-[#8DF000]" />
+              <span className="font-mono text-xs tracking-court uppercase text-[#8DF000] font-semibold">
                 WHY LION ELITE // SCOREBOARD TELEMETRY
               </span>
             </div>
             <h2 className="font-display font-black text-5xl sm:text-7xl lg:text-8xl tracking-tighter uppercase text-white leading-none">
-              THE SCORING OF <span className="text-[#276B0B]">EXCELLENCE.</span>
+              THE SCORING OF <span className="text-[#8DF000]">EXCELLENCE.</span>
             </h2>
           </div>
 
           <div className="flex items-center gap-3 font-mono text-xs text-[#B9B9B9]">
-            <span className="w-2 h-2 rounded-full bg-[#276B0B] animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-[#8DF000] animate-pulse" />
             <span>ELECTRONIC TOURNAMENT SCOREBOARD // MATCH PHILOSOPHY</span>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function ScoreboardSection({ onOpenBooking }) {
                   onClick={() => setActiveScoreIndex(idx)}
                   className={`w-full text-left p-4 sm:p-5 border transition-all duration-300 flex items-center justify-between group relative ${
                     isActive
-                      ? "bg-[#151515] border-[#276B0B] shadow-lg shadow-[#276B0B]/10"
+                      ? "bg-[#151515] border-[#8DF000] shadow-lg shadow-[#8DF000]/10"
                       : "bg-[#090909] border-white/5 hover:border-white/20 hover:bg-[#111111]"
                   }`}
                 >
@@ -66,7 +66,7 @@ export default function ScoreboardSection({ onOpenBooking }) {
                   {isActive && (
                     <motion.div
                       layoutId="activeScoreGlow"
-                      className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#276B0B]"
+                      className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#8DF000]"
                     />
                   )}
 
@@ -74,7 +74,7 @@ export default function ScoreboardSection({ onOpenBooking }) {
                     {/* Oversized Score Typography */}
                     <span
                       className={`font-display font-black text-4xl sm:text-5xl md:text-6xl tracking-tighter uppercase leading-none transition-colors duration-300 ${
-                        isActive ? "text-[#276B0B]" : "text-neutral-500 group-hover:text-white"
+                        isActive ? "text-[#8DF000]" : "text-neutral-500 group-hover:text-white"
                       }`}
                     >
                       {item.score}
@@ -94,7 +94,7 @@ export default function ScoreboardSection({ onOpenBooking }) {
                   <ChevronRight
                     className={`w-5 h-5 transition-transform duration-300 ${
                       isActive
-                        ? "text-[#276B0B] translate-x-1"
+                        ? "text-[#8DF000] translate-x-1"
                         : "text-neutral-600 group-hover:text-white"
                     }`}
                   />
@@ -110,11 +110,11 @@ export default function ScoreboardSection({ onOpenBooking }) {
               {/* Top Scoreboard Digital Bar */}
               <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-8 font-mono text-xs text-[#B9B9B9]">
                 <div className="flex items-center gap-3">
-                  <span className="text-[#276B0B] font-bold">LION ELITE //</span>
+                  <span className="text-[#8DF000] font-bold">LION ELITE //</span>
                   <span>COURT 01 DUBAI</span>
                 </div>
                 <div className="flex items-center gap-4">
-                  <span className="px-2 py-0.5 bg-[#276B0B]/10 text-[#276B0B] border border-[#276B0B]/30 text-[10px]">
+                  <span className="px-2 py-0.5 bg-[#8DF000]/10 text-[#8DF000] border border-[#8DF000]/30 text-[10px]">
                     SET 1 • ACTIVE
                   </span>
                   <span>SCORE: {currentItem.score}</span>
@@ -131,7 +131,7 @@ export default function ScoreboardSection({ onOpenBooking }) {
                   transition={{ duration: 0.35 }}
                   className="space-y-6"
                 >
-                  <div className="flex items-center gap-3 font-mono text-xs text-[#276B0B] uppercase tracking-widest">
+                  <div className="flex items-center gap-3 font-mono text-xs text-[#8DF000] uppercase tracking-widest">
                     <span>{currentItem.tag}</span>
                     <span className="text-neutral-600">—</span>
                     <span>PRINCIPLE LEVEL {activeScoreIndex + 1} OF 5</span>
@@ -143,7 +143,7 @@ export default function ScoreboardSection({ onOpenBooking }) {
                   </h3>
 
                   {/* Quote */}
-                  <p className="font-sans text-lg sm:text-xl text-[#276B0B] italic font-normal border-l-2 border-[#276B0B] pl-4 my-4">
+                  <p className="font-sans text-lg sm:text-xl text-[#8DF000] italic font-normal border-l-2 border-[#8DF000] pl-4 my-4">
                     "{currentItem.quote}"
                   </p>
 
@@ -178,7 +178,7 @@ export default function ScoreboardSection({ onOpenBooking }) {
                     <button
                       type="button"
                       onClick={() => onOpenBooking()}
-                      className="inline-flex items-center gap-2 text-xs font-display font-bold uppercase tracking-wider text-[#276B0B] hover:text-white transition-colors"
+                      className="inline-flex items-center gap-2 text-xs font-display font-bold uppercase tracking-wider text-[#8DF000] hover:text-white transition-colors"
                     >
                       <span>TRAIN UNDER THIS PRINCIPLE</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -192,8 +192,8 @@ export default function ScoreboardSection({ onOpenBooking }) {
               </AnimatePresence>
 
               {/* Decorative Corner Bracket */}
-              <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#276B0B]" />
-              <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-[#276B0B]" />
+              <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#8DF000]" />
+              <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-[#8DF000]" />
             </div>
           </div>
 

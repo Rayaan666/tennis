@@ -53,12 +53,12 @@ function OverheadCourtSvg({ activeProgramId, onSelectProgram, className = "" }) 
           y1="300"
           x2="330"
           y2="300"
-          stroke="#276B0B"
+          stroke="#8DF000"
           strokeWidth="2.5"
           strokeDasharray="4 4"
         />
-        <circle cx="30" cy="300" r="3" fill="#276B0B" />
-        <circle cx="330" cy="300" r="3" fill="#276B0B" />
+        <circle cx="30" cy="300" r="3" fill="#8DF000" />
+        <circle cx="330" cy="300" r="3" fill="#8DF000" />
 
         {/* Service Lines */}
         <line x1="75" y1="180" x2="285" y2="180" stroke="#444444" strokeWidth="1.5" />
@@ -81,15 +81,15 @@ function OverheadCourtSvg({ activeProgramId, onSelectProgram, className = "" }) 
             y="180"
             width="210"
             height="240"
-            fill={activeProgramId === "junior-dev" ? "#276B0B" : "transparent"}
+            fill={activeProgramId === "junior-dev" ? "#8DF000" : "transparent"}
             fillOpacity={activeProgramId === "junior-dev" ? 0.25 : 0.05}
-            stroke={activeProgramId === "junior-dev" ? "#276B0B" : "transparent"}
+            stroke={activeProgramId === "junior-dev" ? "#8DF000" : "transparent"}
             strokeWidth="2"
             strokeDasharray={activeProgramId === "junior-dev" ? "6 3" : "none"}
             className="transition-all duration-300"
           />
           {activeProgramId === "junior-dev" && (
-            <circle cx="180" cy="300" r="10" fill="#276B0B" className="animate-ping opacity-75" />
+            <circle cx="180" cy="300" r="10" fill="#8DF000" className="animate-ping opacity-75" />
           )}
         </g>
 
@@ -103,9 +103,9 @@ function OverheadCourtSvg({ activeProgramId, onSelectProgram, className = "" }) 
             y="420"
             width="105"
             height="140"
-            fill={activeProgramId === "adult-tennis" ? "#276B0B" : "transparent"}
+            fill={activeProgramId === "adult-tennis" ? "#8DF000" : "transparent"}
             fillOpacity={activeProgramId === "adult-tennis" ? 0.28 : 0.05}
-            stroke={activeProgramId === "adult-tennis" ? "#276B0B" : "transparent"}
+            stroke={activeProgramId === "adult-tennis" ? "#8DF000" : "transparent"}
             strokeWidth="2"
             className="transition-all duration-300"
           />
@@ -121,9 +121,9 @@ function OverheadCourtSvg({ activeProgramId, onSelectProgram, className = "" }) 
             y="260"
             width="100"
             height="80"
-            fill={activeProgramId === "private-coaching" ? "#276B0B" : "transparent"}
+            fill={activeProgramId === "private-coaching" ? "#8DF000" : "transparent"}
             fillOpacity={activeProgramId === "private-coaching" ? 0.35 : 0.05}
-            stroke={activeProgramId === "private-coaching" ? "#276B0B" : "transparent"}
+            stroke={activeProgramId === "private-coaching" ? "#8DF000" : "transparent"}
             strokeWidth="2"
             strokeDasharray="4 2"
             className="transition-all duration-300"
@@ -140,9 +140,9 @@ function OverheadCourtSvg({ activeProgramId, onSelectProgram, className = "" }) 
             y="500"
             width="280"
             height="80"
-            fill={activeProgramId === "high-performance" ? "#276B0B" : "transparent"}
+            fill={activeProgramId === "high-performance" ? "#8DF000" : "transparent"}
             fillOpacity={activeProgramId === "high-performance" ? 0.3 : 0.05}
-            stroke={activeProgramId === "high-performance" ? "#276B0B" : "transparent"}
+            stroke={activeProgramId === "high-performance" ? "#8DF000" : "transparent"}
             strokeWidth="2"
             className="transition-all duration-300"
           />
@@ -158,9 +158,9 @@ function OverheadCourtSvg({ activeProgramId, onSelectProgram, className = "" }) 
             y="40"
             width="35"
             height="520"
-            fill={activeProgramId === "group-training" ? "#276B0B" : "transparent"}
+            fill={activeProgramId === "group-training" ? "#8DF000" : "transparent"}
             fillOpacity={activeProgramId === "group-training" ? 0.25 : 0.05}
-            stroke={activeProgramId === "group-training" ? "#276B0B" : "transparent"}
+            stroke={activeProgramId === "group-training" ? "#8DF000" : "transparent"}
             strokeWidth="2"
             className="transition-all duration-300"
           />
@@ -169,9 +169,9 @@ function OverheadCourtSvg({ activeProgramId, onSelectProgram, className = "" }) 
             y="40"
             width="35"
             height="520"
-            fill={activeProgramId === "group-training" ? "#276B0B" : "transparent"}
+            fill={activeProgramId === "group-training" ? "#8DF000" : "transparent"}
             fillOpacity={activeProgramId === "group-training" ? 0.25 : 0.05}
-            stroke={activeProgramId === "group-training" ? "#276B0B" : "transparent"}
+            stroke={activeProgramId === "group-training" ? "#8DF000" : "transparent"}
             strokeWidth="2"
             className="transition-all duration-300"
           />
@@ -187,9 +187,9 @@ function OverheadCourtSvg({ activeProgramId, onSelectProgram, className = "" }) 
             y="40"
             width="105"
             height="140"
-            fill={activeProgramId === "match-play" ? "#276B0B" : "transparent"}
+            fill={activeProgramId === "match-play" ? "#8DF000" : "transparent"}
             fillOpacity={activeProgramId === "match-play" ? 0.3 : 0.05}
-            stroke={activeProgramId === "match-play" ? "#276B0B" : "transparent"}
+            stroke={activeProgramId === "match-play" ? "#8DF000" : "transparent"}
             strokeWidth="2"
             className="transition-all duration-300"
           />
@@ -199,7 +199,7 @@ function OverheadCourtSvg({ activeProgramId, onSelectProgram, className = "" }) 
         <motion.path
           key={activeProgramId}
           d="M 180 520 Q 240 320 180 180"
-          stroke="#276B0B"
+          stroke="#8DF000"
           strokeWidth="1.5"
           strokeDasharray="4 4"
           initial={{ pathLength: 0 }}
@@ -222,18 +222,18 @@ function TacticalMiniRadar({ activeProgramId, onClick }) {
     <button
       type="button"
       onClick={onClick}
-      className="group relative flex items-center gap-2 bg-black/80 backdrop-blur-md border border-white/20 hover:border-[#276B0B] px-2.5 py-1.5 transition-colors"
+      className="group relative flex items-center gap-2 bg-black/80 backdrop-blur-md border border-white/20 hover:border-[#8DF000] px-2.5 py-1.5 transition-colors"
       title="View Court Mapping"
     >
       <div className="relative w-5 h-8 border border-white/30 bg-[#121212] overflow-hidden flex items-center justify-center">
         {/* Net line */}
         <div className="absolute top-1/2 left-0 right-0 h-[1px] bg-white/40" />
         {/* Active zone dot indicator */}
-        <span className="w-1.5 h-1.5 rounded-full bg-[#276B0B] animate-ping" />
+        <span className="w-1.5 h-1.5 rounded-full bg-[#8DF000] animate-ping" />
       </div>
       <div className="text-left font-mono">
         <span className="block text-[8px] text-neutral-400 uppercase tracking-widest leading-none">TACTICAL</span>
-        <span className="text-[10px] text-[#276B0B] font-bold uppercase tracking-wider leading-tight">COURT ZONE</span>
+        <span className="text-[10px] text-[#8DF000] font-bold uppercase tracking-wider leading-tight">COURT ZONE</span>
       </div>
     </button>
   );
@@ -274,7 +274,7 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
   return (
     <section
       id="programs"
-      className="relative w-full bg-[#050505] text-[#F5F5F0] py-12 sm:py-16 lg:py-20 overflow-hidden"
+      className="relative w-full bg-[#050505] text-[#F0F4F8] py-12 sm:py-16 lg:py-20 overflow-hidden border-t-[3px] border-[#8DF000]"
     >
       {/* Subtle Court Line Texture */}
       <div className="absolute inset-0 court-grid-pattern opacity-30 pointer-events-none" />
@@ -284,13 +284,13 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 sm:mb-10 gap-4 sm:gap-6">
           <div>
             <div className="flex items-center gap-3 mb-3 sm:mb-4">
-              <span className="w-6 h-[2px] bg-[#276B0B]" />
-              <span className="font-mono text-xs tracking-court uppercase text-[#276B0B] font-semibold">
+              <span className="w-6 h-[2px] bg-[#8DF000]" />
+              <span className="font-mono text-xs tracking-court uppercase text-[#8DF000] font-semibold">
                 02 / TRAINING PROGRAMS
               </span>
             </div>
             <h2 className="font-display font-black text-4xl sm:text-7xl lg:text-8xl tracking-tighter uppercase text-white leading-none">
-              FIND <span className="text-[#276B0B]">YOUR GAME.</span>
+              FIND <span className="text-[#8DF000]">YOUR GAME.</span>
             </h2>
           </div>
 
@@ -301,7 +301,7 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
             <button
               type="button"
               onClick={() => onOpenBooking(activeProgram.id)}
-              className="group inline-flex items-center gap-3 px-5 py-3 sm:px-6 sm:py-3.5 bg-white/10 hover:bg-[#276B0B] text-white hover:text-[#050505] font-display text-xs font-bold tracking-wider uppercase transition-all duration-300 border border-white/10 hover:border-[#276B0B]"
+              className="group inline-flex items-center gap-3 px-5 py-3 sm:px-6 sm:py-3.5 bg-white/10 hover:bg-[#8DF000] text-white hover:text-[#050505] font-display text-xs font-bold tracking-wider uppercase transition-all duration-300 border border-white/10 hover:border-[#8DF000]"
             >
               <span>EXPLORE ALL PROGRAMS</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -319,7 +319,7 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
           <div className="space-y-2">
             <div className="flex items-center justify-between font-mono text-[11px] text-neutral-400 uppercase tracking-widest px-1">
               <span>SELECT PROGRAM:</span>
-              <span className="text-[#276B0B] font-bold">
+              <span className="text-[#8DF000] font-bold">
                 {activeProgram.number} / 06 — {activeProgram.title}
               </span>
             </div>
@@ -339,11 +339,11 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
                     onClick={() => handleSelectProgram(prog.id)}
                     className={`snap-center shrink-0 px-3.5 py-2 border transition-all duration-200 flex items-center gap-2 ${
                       isActive
-                        ? "bg-[#276B0B] border-[#276B0B] text-black font-bold shadow-md shadow-[#276B0B]/30"
+                        ? "bg-[#8DF000] border-[#8DF000] text-black font-bold shadow-md shadow-[#8DF000]/30"
                         : "bg-[#111111] border-white/10 text-neutral-300 hover:border-white/30 hover:bg-[#161616]"
                     }`}
                   >
-                    <span className={`font-mono text-xs ${isActive ? "text-black" : "text-[#276B0B]"}`}>
+                    <span className={`font-mono text-xs ${isActive ? "text-black" : "text-[#8DF000]"}`}>
                       {prog.number}
                     </span>
                     <span className="font-display text-xs tracking-wider uppercase whitespace-nowrap">
@@ -367,7 +367,7 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
                   onClick={() => setMobileViewMode("photo")}
                   className={`px-3 py-1 font-mono text-[10px] uppercase tracking-wider transition-colors flex items-center gap-1.5 ${
                     mobileViewMode === "photo"
-                      ? "bg-[#276B0B] text-black font-bold"
+                      ? "bg-[#8DF000] text-black font-bold"
                       : "text-neutral-400 hover:text-white"
                   }`}
                 >
@@ -379,7 +379,7 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
                   onClick={() => setMobileViewMode("court")}
                   className={`px-3 py-1 font-mono text-[10px] uppercase tracking-wider transition-colors flex items-center gap-1.5 ${
                     mobileViewMode === "court"
-                      ? "bg-[#276B0B] text-black font-bold"
+                      ? "bg-[#8DF000] text-black font-bold"
                       : "text-neutral-400 hover:text-white"
                   }`}
                 >
@@ -389,7 +389,7 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
               </div>
 
               {/* Court Zone Tag */}
-              <span className="font-mono text-[10px] text-[#276B0B] uppercase tracking-wider truncate max-w-[140px] sm:max-w-none">
+              <span className="font-mono text-[10px] text-[#8DF000] uppercase tracking-wider truncate max-w-[140px] sm:max-w-none">
                 {activeProgram.courtZone.replace('_', ' ')}
               </span>
             </div>
@@ -416,7 +416,7 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/40 pointer-events-none" />
 
                     {/* Top Left Badge */}
-                    <div className="absolute top-2.5 left-2.5 bg-black/85 border border-white/10 px-2.5 py-1 font-mono text-[10px] text-[#276B0B] uppercase tracking-wider">
+                    <div className="absolute top-2.5 left-2.5 bg-black/85 border border-white/10 px-2.5 py-1 font-mono text-[10px] text-[#8DF000] uppercase tracking-wider">
                       PROG {activeProgram.number} // {activeProgram.specs.ratio}
                     </div>
 
@@ -431,7 +431,7 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
                     {/* Bottom Title & Focus Strip */}
                     <div className="absolute bottom-2.5 inset-x-2.5 flex items-end justify-between pointer-events-none">
                       <div>
-                        <span className="font-mono text-[10px] text-[#276B0B] uppercase tracking-widest block">
+                        <span className="font-mono text-[10px] text-[#8DF000] uppercase tracking-widest block">
                           {activeProgram.specs.focus}
                         </span>
                         <h3 className="font-display text-lg font-bold tracking-wide uppercase text-white leading-tight">
@@ -474,7 +474,7 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
                       />
                     </div>
                     <div className="mt-3 text-center">
-                      <span className="font-mono text-[10px] text-[#276B0B] uppercase tracking-wider block">
+                      <span className="font-mono text-[10px] text-[#8DF000] uppercase tracking-wider block">
                         📍 {activeProgram.zoneLabel}
                       </span>
                       <p className="font-sans text-[11px] text-neutral-400 mt-0.5">
@@ -514,7 +514,7 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
               <ul className="space-y-1.5 text-xs text-[#B9B9B9] font-sans pt-1">
                 {activeProgram.bulletPoints.map((point, idx) => (
                   <li key={idx} className="flex items-start gap-2">
-                    <Check className="w-3.5 h-3.5 text-[#276B0B] shrink-0 mt-0.5" />
+                    <Check className="w-3.5 h-3.5 text-[#8DF000] shrink-0 mt-0.5" />
                     <span className="leading-snug">{point}</span>
                   </li>
                 ))}
@@ -544,7 +544,7 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
                 <button
                   type="button"
                   onClick={() => onOpenBooking(activeProgram.id)}
-                  className="w-full py-3.5 px-4 bg-[#276B0B] hover:bg-white text-[#050505] font-display text-xs font-bold tracking-wider uppercase transition-colors flex items-center justify-center gap-2 shadow-lg shadow-[#276B0B]/20"
+                  className="w-full py-3.5 px-4 bg-[#8DF000] hover:bg-white text-[#050505] font-display text-xs font-bold tracking-wider uppercase transition-colors flex items-center justify-center gap-2 shadow-lg shadow-[#8DF000]/20"
                 >
                   <span>BOOK {activeProgram.title}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -578,7 +578,7 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
                   onClick={() => handleSelectProgram(prog.id)}
                   className={`group relative p-4 sm:p-5 border transition-all duration-300 cursor-pointer ${
                     isActive
-                      ? "bg-[#151515] border-[#276B0B] shadow-lg shadow-[#276B0B]/5"
+                      ? "bg-[#151515] border-[#8DF000] shadow-lg shadow-[#8DF000]/5"
                       : "bg-[#0A0A0A] border-white/5 hover:border-white/20 hover:bg-[#111111]"
                   }`}
                 >
@@ -586,14 +586,14 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
                   {isActive && (
                     <motion.div
                       layoutId="activeProgramBar"
-                      className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#276B0B]"
+                      className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#8DF000]"
                     />
                   )}
 
                   <div className="flex items-start justify-between">
                     <div>
                       <div className="flex items-center gap-3 mb-1">
-                        <span className={`font-mono text-xs font-bold tracking-wider ${isActive ? "text-[#276B0B]" : "text-neutral-500"}`}>
+                        <span className={`font-mono text-xs font-bold tracking-wider ${isActive ? "text-[#8DF000]" : "text-neutral-500"}`}>
                           {prog.number}
                         </span>
                         <h3 className="font-display text-lg sm:text-xl font-bold tracking-wide uppercase text-white">
@@ -607,7 +607,7 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
 
                     <span className={`font-mono text-[10px] uppercase px-2 py-1 tracking-wider border shrink-0 transition-colors ${
                       isActive 
-                        ? "border-[#276B0B] text-[#276B0B] bg-[#276B0B]/10" 
+                        ? "border-[#8DF000] text-[#8DF000] bg-[#8DF000]/10" 
                         : "border-white/10 text-neutral-500 group-hover:text-neutral-300"
                     }`}>
                       {prog.specs.ratio}
@@ -619,7 +619,7 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
-                      className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between font-mono text-[11px] text-[#276B0B]"
+                      className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between font-mono text-[11px] text-[#8DF000]"
                     >
                       <span>ZONE: {prog.zoneLabel}</span>
                       <span className="flex items-center gap-1 font-sans text-white hover:underline">
@@ -639,12 +639,12 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
               {/* Technical Header Strip */}
               <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-6 font-mono text-xs">
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#276B0B] animate-ping" />
+                  <div className="w-2 h-2 rounded-full bg-[#8DF000] animate-ping" />
                   <span className="text-white uppercase tracking-wider">
                     {activeProgram.zoneLabel}
                   </span>
                 </div>
-                <span className="text-[#276B0B] uppercase tracking-widest hidden sm:inline-block">
+                <span className="text-[#8DF000] uppercase tracking-widest hidden sm:inline-block">
                   PROGRAM {activeProgram.number} / 06
                 </span>
               </div>
@@ -680,7 +680,7 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
                           className="w-full h-full object-cover filter brightness-90 group-hover:scale-105 transition-transform duration-700"
                           loading="lazy"
                         />
-                        <div className="absolute top-2.5 left-2.5 bg-[#050505]/90 border border-white/10 px-2.5 py-1 font-mono text-[10px] text-[#276B0B] uppercase tracking-wider">
+                        <div className="absolute top-2.5 left-2.5 bg-[#050505]/90 border border-white/10 px-2.5 py-1 font-mono text-[10px] text-[#8DF000] uppercase tracking-wider">
                           PROGRAM {activeProgram.number}
                         </div>
                         <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black via-black/40 to-transparent p-3">
@@ -706,7 +706,7 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
                       <ul className="space-y-2 text-xs text-[#B9B9B9] font-sans">
                         {activeProgram.bulletPoints.map((point, idx) => (
                           <li key={idx} className="flex items-start gap-2">
-                            <Check className="w-3.5 h-3.5 text-[#276B0B] shrink-0 mt-0.5" />
+                            <Check className="w-3.5 h-3.5 text-[#8DF000] shrink-0 mt-0.5" />
                             <span>{point}</span>
                           </li>
                         ))}
@@ -716,7 +716,7 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
                       <button
                         type="button"
                         onClick={() => onOpenBooking(activeProgram.id)}
-                        className="w-full py-3 px-4 bg-[#276B0B] hover:bg-white text-[#050505] font-display text-xs font-bold tracking-wider uppercase transition-colors flex items-center justify-center gap-2"
+                        className="w-full py-3 px-4 bg-[#8DF000] hover:bg-white text-[#050505] font-display text-xs font-bold tracking-wider uppercase transition-colors flex items-center justify-center gap-2"
                       >
                         <span>BOOK {activeProgram.title}</span>
                         <ArrowRight className="w-3.5 h-3.5" />

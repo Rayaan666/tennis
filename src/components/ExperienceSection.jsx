@@ -12,7 +12,7 @@ export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="relative w-full min-h-[70vh] flex items-center justify-center bg-[#050505] overflow-hidden py-16 sm:py-20 lg:py-24"
+      className="relative w-full min-h-[70vh] flex items-center justify-center bg-[#050505] overflow-hidden py-16 sm:py-20 lg:py-24 border-t-[3px] border-[#8DF000]"
     >
       {/* Full-Bleed Dramatic Action Visual with Subtle Parallax & Mood Grade */}
       <div className="absolute inset-0 z-0">
@@ -48,11 +48,11 @@ export default function ExperienceSection() {
           transition={{ duration: 0.6 }}
           className="inline-flex items-center gap-3 mb-6"
         >
-          <span className="w-8 h-[1px] bg-[#276B0B]" />
-          <span className="font-mono text-xs tracking-court uppercase text-[#276B0B] font-semibold">
+          <span className="w-8 h-[1px] bg-[#8DF000]" />
+          <span className="font-mono text-xs tracking-court uppercase text-[#8DF000] font-semibold">
             THE LION ELITE EXPERIENCE
           </span>
-          <span className="w-8 h-[1px] bg-[#276B0B]" />
+          <span className="w-8 h-[1px] bg-[#8DF000]" />
         </motion.div>
 
         {/* Massive Headline */}
@@ -64,7 +64,7 @@ export default function ExperienceSection() {
           className="font-display font-black text-6xl sm:text-8xl md:text-9xl lg:text-[120px] uppercase text-white tracking-tighter leading-[0.88] mb-16"
         >
           MORE THAN <br />
-          <span className="text-[#276B0B]">A LESSON.</span>
+          <span className="text-[#8DF000]">A LESSON.</span>
         </motion.h2>
 
         {/* Progressive Mantras Revealed on Scroll */}
@@ -78,11 +78,11 @@ export default function ExperienceSection() {
               transition={{ duration: 0.6, delay: idx * 0.18 }}
               className="flex items-center justify-center gap-4"
             >
-              <span className="w-2 h-2 bg-[#276B0B] rotate-45 shrink-0" />
+              <span className="w-2 h-2 bg-[#8DF000] rotate-45 shrink-0" />
               <p className="font-display text-2xl sm:text-4xl md:text-5xl uppercase tracking-wider text-white font-bold">
                 {mantra.text}
               </p>
-              <span className="w-2 h-2 bg-[#276B0B] rotate-45 shrink-0" />
+              <span className="w-2 h-2 bg-[#8DF000] rotate-45 shrink-0" />
             </motion.div>
           ))}
         </div>
@@ -98,7 +98,7 @@ export default function ExperienceSection() {
           <span className="font-mono text-xs text-[#B9B9B9] uppercase tracking-widest block mb-3">
             // UNCOMPROMISED ATHLETIC TRANSFORMATION
           </span>
-          <p className="font-display font-bold text-2xl sm:text-4xl md:text-5xl text-[#276B0B] uppercase tracking-wide">
+          <p className="font-display font-bold text-2xl sm:text-4xl md:text-5xl text-[#8DF000] uppercase tracking-wide">
             THIS IS WHERE REPETITION BECOMES INSTINCT.
           </p>
         </motion.div>

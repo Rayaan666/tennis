@@ -6,7 +6,7 @@ export default function FinalCtaSection({ onOpenBooking }) {
   return (
     <section
       id="contact"
-      className="relative w-full min-h-screen flex items-center justify-center bg-[#050505] text-[#F5F5F0] overflow-hidden py-32"
+      className="relative w-full min-h-screen flex items-center justify-center bg-[#050505] text-[#F0F4F8] overflow-hidden py-32 border-t-[3px] border-[#8DF000]"
     >
       {/* Background Image: Night Court with Floodlights */}
       <div className="absolute inset-0 z-0">
@@ -36,11 +36,11 @@ export default function FinalCtaSection({ onOpenBooking }) {
           transition={{ duration: 0.6 }}
           className="inline-flex items-center gap-3 mb-6"
         >
-          <span className="w-8 h-[2px] bg-[#276B0B]" />
-          <span className="font-mono text-xs tracking-court uppercase text-[#276B0B] font-semibold">
+          <span className="w-8 h-[2px] bg-[#8DF000]" />
+          <span className="font-mono text-xs tracking-court uppercase text-[#8DF000] font-semibold">
             YOUR NEXT POINT STARTS HERE.
           </span>
-          <span className="w-8 h-[2px] bg-[#276B0B]" />
+          <span className="w-8 h-[2px] bg-[#8DF000]" />
         </motion.div>
 
         {/* Huge Headline */}
@@ -53,7 +53,7 @@ export default function FinalCtaSection({ onOpenBooking }) {
         >
           READY TO <br />
           STEP ON <br />
-          <span className="text-[#276B0B]">COURT?</span>
+          <span className="text-[#8DF000]">COURT?</span>
         </motion.h2>
 
         {/* Supporting Copy */}
@@ -72,7 +72,7 @@ export default function FinalCtaSection({ onOpenBooking }) {
           {/* Baseline Line */}
           <div className="w-full h-[1.5px] bg-white/20 relative overflow-hidden">
             <motion.div
-              className="absolute top-0 bottom-0 w-24 bg-gradient-to-r from-transparent via-[#276B0B] to-transparent"
+              className="absolute top-0 bottom-0 w-24 bg-gradient-to-r from-transparent via-[#8DF000] to-transparent"
               animate={{ x: ["-100%", "450%"] }}
               transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
             />
@@ -80,7 +80,7 @@ export default function FinalCtaSection({ onOpenBooking }) {
 
           {/* Rolling Tennis Ball traveling along the baseline */}
           <motion.div
-            className="absolute top-0 w-4 h-4 rounded-full bg-[#276B0B] shadow-[0_0_12px_#276B0B] -translate-y-1/2"
+            className="absolute top-0 w-4 h-4 rounded-full bg-[#8DF000] shadow-[0_0_12px_#8DF000] -translate-y-1/2"
             animate={{ left: ["0%", "96%"] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
           />
@@ -97,7 +97,7 @@ export default function FinalCtaSection({ onOpenBooking }) {
           <button
             type="button"
             onClick={() => onOpenBooking()}
-            className="group relative inline-flex items-center justify-center gap-3 px-10 py-4 bg-[#276B0B] text-white font-display text-base font-bold tracking-wider uppercase transition-all duration-300 hover:bg-white active:scale-98 shadow-xl shadow-[#276B0B]/20"
+            className="group relative inline-flex items-center justify-center gap-3 px-10 py-4 bg-[#8DF000] text-white font-display text-base font-bold tracking-wider uppercase transition-all duration-300 hover:bg-white active:scale-98 shadow-xl shadow-[#8DF000]/20"
           >
             <span>BOOK A SESSION</span>
             <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1.5" />
@@ -108,9 +108,9 @@ export default function FinalCtaSection({ onOpenBooking }) {
             href="https://wa.me/971500000000"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 text-white font-display text-base font-bold tracking-wider uppercase transition-all duration-300 hover:border-[#276B0B] hover:text-[#276B0B]"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 text-white font-display text-base font-bold tracking-wider uppercase transition-all duration-300 hover:border-[#8DF000] hover:text-[#8DF000]"
           >
-            <MessageSquare className="w-4 h-4 text-[#276B0B]" />
+            <MessageSquare className="w-4 h-4 text-[#8DF000]" />
             <span>CONTACT THE ACADEMY</span>
           </a>
         </motion.div>
@@ -118,16 +118,16 @@ export default function FinalCtaSection({ onOpenBooking }) {
         {/* Location & Quick Direct Contact Tag */}
         <div className="mt-14 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 font-mono text-xs text-[#B9B9B9]">
           <div className="flex items-center gap-2">
-            <MapPin className="w-3.5 h-3.5 text-[#276B0B]" />
+            <MapPin className="w-3.5 h-3.5 text-[#8DF000]" />
             <span>DUBAI SPORTS CITY & AL WASL COURTS</span>
           </div>
           <span className="text-neutral-600">•</span>
           <div className="flex items-center gap-2">
-            <Phone className="w-3.5 h-3.5 text-[#276B0B]" />
+            <Phone className="w-3.5 h-3.5 text-[#8DF000]" />
             <span>+971 4 800 8366</span>
           </div>
           <span className="text-neutral-600">•</span>
-          <span className="text-[#276B0B]">GST TIME ZONE (UTC+4)</span>
+          <span className="text-[#8DF000]">GST TIME ZONE (UTC+4)</span>
         </div>
 
       </div>

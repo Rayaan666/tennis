@@ -26,11 +26,11 @@ function TacticalCourtSvg({ activeStepIndex }) {
         y1="30"
         x2="400"
         y2="470"
-        stroke="#276B0B"
+        stroke="#8DF000"
         strokeWidth="2"
         strokeDasharray="4 4"
       />
-      <text x="408" y="48" fill="#276B0B" fontSize="10" fontFamily="monospace">
+      <text x="408" y="48" fill="#8DF000" fontSize="10" fontFamily="monospace">
         NET // 0.914M
       </text>
 
@@ -48,23 +48,23 @@ function TacticalCourtSvg({ activeStepIndex }) {
       {/* Step 0: TECHNIQUE (Cross-Court Forehand Vector) */}
       {activeStepIndex === 0 && (
         <g>
-          <circle cx="140" cy="380" r="10" fill="#276B0B" />
-          <circle cx="140" cy="380" r="22" stroke="#276B0B" strokeWidth="1" strokeDasharray="3 3" className="animate-pulse" />
+          <circle cx="140" cy="380" r="10" fill="#8DF000" />
+          <circle cx="140" cy="380" r="22" stroke="#8DF000" strokeWidth="1" strokeDasharray="3 3" className="animate-pulse" />
           <text x="110" y="415" fill="#FFF" fontSize="11" fontFamily="monospace">
             PLAYER [STANCE: OPEN]
           </text>
           <motion.path
             d="M 140 380 Q 400 230 660 120"
-            stroke="#276B0B"
+            stroke="#8DF000"
             strokeWidth="2.5"
             strokeDasharray="6 4"
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
             transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
           />
-          <circle cx="660" cy="120" r="28" fill="#276B0B" fillOpacity="0.2" stroke="#276B0B" strokeWidth="1.5" />
-          <circle cx="660" cy="120" r="5" fill="#276B0B" />
-          <text x="590" y="95" fill="#276B0B" fontSize="10" fontFamily="monospace">
+          <circle cx="660" cy="120" r="28" fill="#8DF000" fillOpacity="0.2" stroke="#8DF000" strokeWidth="1.5" />
+          <circle cx="660" cy="120" r="5" fill="#8DF000" />
+          <text x="590" y="95" fill="#8DF000" fontSize="10" fontFamily="monospace">
             CROSSCOURT TARGET // 2,850 RPM
           </text>
         </g>
@@ -79,15 +79,15 @@ function TacticalCourtSvg({ activeStepIndex }) {
           </text>
           <motion.path
             d="M 110 130 Q 150 200 150 250"
-            stroke="#276B0B"
+            stroke="#8DF000"
             strokeWidth="3"
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
             transition={{ duration: 1.5, repeat: Infinity }}
           />
-          <circle cx="150" cy="250" r="12" fill="#276B0B" fillOpacity="0.3" stroke="#276B0B" strokeWidth="2" />
-          <circle cx="150" cy="250" r="4" fill="#276B0B" />
-          <text x="170" y="255" fill="#276B0B" fontSize="10" fontFamily="monospace">
+          <circle cx="150" cy="250" r="12" fill="#8DF000" fillOpacity="0.3" stroke="#8DF000" strokeWidth="2" />
+          <circle cx="150" cy="250" r="4" fill="#8DF000" />
+          <text x="170" y="255" fill="#8DF000" fontSize="10" fontFamily="monospace">
             RECOVERY HUB [0.18S SPLIT-STEP]
           </text>
         </g>
@@ -96,7 +96,7 @@ function TacticalCourtSvg({ activeStepIndex }) {
       {/* Step 2: DECISION (Down-the-line Attack Lane) */}
       {activeStepIndex === 2 && (
         <g>
-          <circle cx="210" cy="360" r="10" fill="#276B0B" />
+          <circle cx="210" cy="360" r="10" fill="#8DF000" />
           <text x="180" y="395" fill="#FFF" fontSize="11" fontFamily="monospace">
             INSIDE-OUT STRIKE POSITION
           </text>
@@ -106,14 +106,14 @@ function TacticalCourtSvg({ activeStepIndex }) {
           </text>
           <motion.path
             d="M 210 360 L 680 110"
-            stroke="#276B0B"
+            stroke="#8DF000"
             strokeWidth="3"
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
             transition={{ duration: 1.2, repeat: Infinity }}
           />
-          <rect x="620" y="90" width="100" height="50" fill="#276B0B" fillOpacity="0.25" stroke="#276B0B" strokeWidth="1.5" />
-          <text x="630" y="120" fill="#276B0B" fontSize="10" fontFamily="monospace font-bold">
+          <rect x="620" y="90" width="100" height="50" fill="#8DF000" fillOpacity="0.25" stroke="#8DF000" strokeWidth="1.5" />
+          <text x="630" y="120" fill="#8DF000" fontSize="10" fontFamily="monospace font-bold">
             OPEN COURT WINNER
           </text>
         </g>
@@ -122,21 +122,21 @@ function TacticalCourtSvg({ activeStepIndex }) {
       {/* Step 3: COMPETE (Ace Down The T / Match Point) */}
       {activeStepIndex === 3 && (
         <g>
-          <circle cx="90" cy="250" r="12" fill="#276B0B" />
+          <circle cx="90" cy="250" r="12" fill="#8DF000" />
           <text x="70" y="225" fill="#FFF" fontSize="11" fontFamily="monospace">
             SERVE [DEUCE COURT]
           </text>
           <motion.path
             d="M 90 250 L 560 250"
-            stroke="#276B0B"
+            stroke="#8DF000"
             strokeWidth="3"
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
             transition={{ duration: 0.9, repeat: Infinity }}
           />
-          <circle cx="560" cy="250" r="18" fill="#276B0B" fillOpacity="0.3" stroke="#276B0B" strokeWidth="2" />
-          <circle cx="560" cy="250" r="5" fill="#276B0B" />
-          <text x="500" y="225" fill="#276B0B" fontSize="11" fontFamily="monospace font-bold">
+          <circle cx="560" cy="250" r="18" fill="#8DF000" fillOpacity="0.3" stroke="#8DF000" strokeWidth="2" />
+          <circle cx="560" cy="250" r="5" fill="#8DF000" />
+          <text x="500" y="225" fill="#8DF000" fontSize="11" fontFamily="monospace font-bold">
             ACE DOWN THE 'T' // 204 KM/H
           </text>
         </g>
@@ -171,7 +171,7 @@ export default function PhilosophySection({ onOpenBooking }) {
   return (
     <section
       id="philosophy"
-      className="relative w-full bg-[#050505] text-[#F5F5F0] py-12 sm:py-16 lg:py-20 overflow-hidden border-t border-white/10"
+      className="relative w-full bg-[#050505] text-[#F0F4F8] py-12 sm:py-16 lg:py-20 overflow-hidden border-t-[3px] border-[#8DF000]"
       itemScope
       itemType="https://schema.org/EducationalOccupationalProgram"
     >
@@ -187,15 +187,15 @@ export default function PhilosophySection({ onOpenBooking }) {
         {/* Section Header */}
         <header className="max-w-3xl mb-6 sm:mb-10">
           <div className="flex items-center gap-3 mb-3 sm:mb-4">
-            <span className="w-6 h-[2px] bg-[#276B0B]" />
-            <h2 className="font-mono text-xs tracking-court uppercase text-[#276B0B] font-semibold">
+            <span className="w-6 h-[2px] bg-[#8DF000]" />
+            <h2 className="font-mono text-xs tracking-court uppercase text-[#8DF000] font-semibold">
               03 / PLAYER DEVELOPMENT — ATHLETE PERFORMANCE METHODOLOGY IN DUBAI
             </h2>
           </div>
 
           <h3 className="font-display font-black text-4xl sm:text-7xl lg:text-8xl tracking-tighter uppercase text-white leading-[0.9] mb-4 sm:mb-6">
             EVERY POINT <br />
-            TELLS US <span className="text-[#276B0B]">SOMETHING.</span>
+            TELLS US <span className="text-[#8DF000]">SOMETHING.</span>
           </h3>
 
           <p className="font-sans text-sm sm:text-lg text-[#B9B9B9] leading-relaxed">
@@ -213,7 +213,7 @@ export default function PhilosophySection({ onOpenBooking }) {
           <div className="space-y-2">
             <div className="flex items-center justify-between font-mono text-[11px] text-neutral-400 uppercase tracking-widest px-1">
               <span>PERFORMANCE PHASE:</span>
-              <span className="text-[#276B0B] font-bold">
+              <span className="text-[#8DF000] font-bold">
                 PHASE 0{activeStepIndex + 1} / 04 — {currentStage.label.split(' / ')[1]}
               </span>
             </div>
@@ -233,11 +233,11 @@ export default function PhilosophySection({ onOpenBooking }) {
                     onClick={() => setActiveStepIndex(idx)}
                     className={`snap-center shrink-0 px-3.5 py-2 border transition-all duration-200 flex items-center gap-2 ${
                       isActive
-                        ? "bg-[#276B0B] border-[#276B0B] text-black font-bold shadow-md shadow-[#276B0B]/30"
+                        ? "bg-[#8DF000] border-[#8DF000] text-black font-bold shadow-md shadow-[#8DF000]/30"
                         : "bg-[#111111] border-white/10 text-neutral-300 hover:border-white/30 hover:bg-[#161616]"
                     }`}
                   >
-                    <span className={`font-mono text-xs ${isActive ? "text-black" : "text-[#276B0B]"}`}>
+                    <span className={`font-mono text-xs ${isActive ? "text-black" : "text-[#8DF000]"}`}>
                       {stage.step}
                     </span>
                     <span className="font-display text-xs tracking-wider uppercase whitespace-nowrap">
@@ -255,12 +255,12 @@ export default function PhilosophySection({ onOpenBooking }) {
             {/* Tactical Status Banner */}
             <div className="flex items-center justify-between font-mono text-[11px] pb-3 border-b border-white/10">
               <div className="flex items-center gap-2 text-white">
-                <Activity className="w-3.5 h-3.5 text-[#276B0B] animate-pulse shrink-0" />
+                <Activity className="w-3.5 h-3.5 text-[#8DF000] animate-pulse shrink-0" />
                 <span className="tracking-wider uppercase truncate max-w-[170px] sm:max-w-none">
                   {currentStage.concept}
                 </span>
               </div>
-              <span className="text-[#276B0B] text-[10px] uppercase font-bold shrink-0">
+              <span className="text-[#8DF000] text-[10px] uppercase font-bold shrink-0">
                 TARGET: {currentStage.tacticalVector.targetZone}
               </span>
             </div>
@@ -302,7 +302,7 @@ export default function PhilosophySection({ onOpenBooking }) {
             {/* Stage Details & Description */}
             <div className="space-y-3 pt-1">
               <div>
-                <span className="font-mono text-[10px] text-[#276B0B] uppercase tracking-widest font-bold block mb-1">
+                <span className="font-mono text-[10px] text-[#8DF000] uppercase tracking-widest font-bold block mb-1">
                   {currentStage.label}
                 </span>
                 <h4 className="font-display text-lg sm:text-xl font-bold tracking-wide uppercase text-white leading-tight mb-2">
@@ -317,7 +317,7 @@ export default function PhilosophySection({ onOpenBooking }) {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 font-mono text-[10px] pt-1">
                 {currentStage.tacticalVector.metrics.map((metric, mIdx) => (
                   <div key={mIdx} className="p-2 bg-[#141414] border border-white/5 flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#276B0B] shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#8DF000] shrink-0" />
                     <span className="text-white font-semibold truncate">{metric}</span>
                   </div>
                 ))}
@@ -347,7 +347,7 @@ export default function PhilosophySection({ onOpenBooking }) {
                 <button
                   type="button"
                   onClick={onOpenBooking}
-                  className="w-full py-3.5 px-4 bg-[#276B0B] hover:bg-white text-[#050505] font-display text-xs font-bold tracking-wider uppercase transition-colors flex items-center justify-center gap-2 shadow-lg shadow-[#276B0B]/20"
+                  className="w-full py-3.5 px-4 bg-[#8DF000] hover:bg-white text-[#050505] font-display text-xs font-bold tracking-wider uppercase transition-colors flex items-center justify-center gap-2 shadow-lg shadow-[#8DF000]/20"
                 >
                   <span>APPLY FOR {currentStage.label.split(' / ')[1]} ASSESSMENT</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -374,7 +374,7 @@ export default function PhilosophySection({ onOpenBooking }) {
                   onClick={() => setActiveStepIndex(idx)}
                   className={`p-5 sm:p-6 border transition-all duration-300 cursor-pointer text-left relative ${
                     isActive
-                      ? "bg-[#151515] border-[#276B0B] shadow-xl shadow-[#276B0B]/5"
+                      ? "bg-[#151515] border-[#8DF000] shadow-xl shadow-[#8DF000]/5"
                       : "bg-[#0A0A0A] border-white/5 hover:border-white/20 hover:bg-[#111111]"
                   }`}
                   itemProp="hasCourse"
@@ -389,12 +389,12 @@ export default function PhilosophySection({ onOpenBooking }) {
                   {isActive && (
                     <motion.div
                       layoutId="activePhilosophyBar"
-                      className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#276B0B]"
+                      className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#8DF000]"
                     />
                   )}
 
                   <div className="flex items-center justify-between mb-2">
-                    <span className={`font-mono text-xs font-bold tracking-widest ${isActive ? "text-[#276B0B]" : "text-neutral-500"}`}>
+                    <span className={`font-mono text-xs font-bold tracking-widest ${isActive ? "text-[#8DF000]" : "text-neutral-500"}`}>
                       {stage.label}
                     </span>
                     <span className="font-mono text-[10px] text-neutral-500 uppercase">
@@ -420,7 +420,7 @@ export default function PhilosophySection({ onOpenBooking }) {
                       {stage.tacticalVector.metrics.map((metric, mIdx) => (
                         <span
                           key={mIdx}
-                          className="font-mono text-[10px] bg-[#276B0B]/20 text-[#276B0B] px-2 py-0.5 border border-[#276B0B]/30"
+                          className="font-mono text-[10px] bg-[#8DF000]/20 text-[#8DF000] px-2 py-0.5 border border-[#8DF000]/30"
                         >
                           {metric}
                         </span>
@@ -439,12 +439,12 @@ export default function PhilosophySection({ onOpenBooking }) {
               {/* Tactical Status Banner */}
               <figcaption className="flex items-center justify-between font-mono text-xs pb-4 border-b border-white/10 mb-6">
                 <div className="flex items-center gap-2 text-white">
-                  <Activity className="w-3.5 h-3.5 text-[#276B0B]" />
+                  <Activity className="w-3.5 h-3.5 text-[#8DF000]" />
                   <span className="tracking-widest uppercase">
                     TACTICAL VECTOR // {currentStage.concept}
                   </span>
                 </div>
-                <span className="text-[#276B0B]">TARGET: {currentStage.tacticalVector.targetZone}</span>
+                <span className="text-[#8DF000]">TARGET: {currentStage.tacticalVector.targetZone}</span>
               </figcaption>
 
               {/* Overhead Court Canvas */}
@@ -456,11 +456,11 @@ export default function PhilosophySection({ onOpenBooking }) {
               <div className="mt-4 flex flex-wrap items-center justify-between text-[11px] font-mono text-neutral-400">
                 <div className="flex items-center gap-4">
                   <span className="flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-[#276B0B]" />
+                    <span className="w-2 h-2 rounded-full bg-[#8DF000]" />
                     <span>TRAJECTORY VECTOR</span>
                   </span>
                   <span className="flex items-center gap-1.5">
-                    <span className="w-2 h-2 border border-[#276B0B]" />
+                    <span className="w-2 h-2 border border-[#8DF000]" />
                     <span>PRECISION TARGET</span>
                   </span>
                 </div>
