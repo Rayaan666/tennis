@@ -160,7 +160,7 @@ export default function HeroSection({ onOpenBooking }) {
             <button
               type="button"
               onClick={onOpenBooking}
-              className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#8DF000] text-white font-display text-base font-bold tracking-wider uppercase transition-all duration-300 hover:bg-white hover:text-[#050505] active:scale-98 shadow-xl shadow-[#8DF000]/20"
+              className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#8DF000] text-[#050505] font-display text-base font-bold tracking-wider uppercase transition-all duration-300 hover:bg-white hover:text-[#050505] active:scale-98 shadow-xl shadow-[#8DF000]/20"
             >
               <span>BOOK A TRAINING SESSION</span>
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1.5" />

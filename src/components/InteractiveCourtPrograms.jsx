@@ -301,7 +301,7 @@ export default function InteractiveCourtPrograms({ onOpenBooking }) {
             <button
               type="button"
               onClick={() => onOpenBooking(activeProgram.id)}
-              className="group inline-flex items-center gap-3 px-5 py-3 sm:px-6 sm:py-3.5 bg-white/10 hover:bg-[#8DF000] text-white hover:text-[#050505] font-display text-xs font-bold tracking-wider uppercase transition-all duration-300 border border-white/10 hover:border-[#8DF000]"
+              className="group inline-flex items-center gap-3 px-5 py-3 sm:px-6 sm:py-3.5 bg-[#8DF000] text-[#050505] font-display text-xs font-bold tracking-wider uppercase transition-all duration-300 hover:bg-white"
             >
               <span>EXPLORE ALL PROGRAMS</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

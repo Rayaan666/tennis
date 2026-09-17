@@ -37,7 +37,7 @@ export default function GallerySection({ onOpenBooking }) {
             <button
               type="button"
               onClick={onOpenBooking}
-              className="inline-flex items-center gap-2 px-6 py-3.5 bg-white/10 hover:bg-[#8DF000] text-white hover:text-[#050505] font-display text-xs font-bold uppercase tracking-wider transition-colors border border-white/10 hover:border-[#8DF000]"
+              className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#8DF000] text-[#050505] font-display text-xs font-bold uppercase tracking-wider transition-colors hover:bg-white"
             >
               <span>VIEW THE ACADEMY</span>
               <ArrowRight className="w-4 h-4" />

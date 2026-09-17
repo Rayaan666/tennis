@@ -48,7 +48,7 @@ export default function Navbar({ onOpenBooking }) {
               src="/logo.png"
               alt="Lion Elite Tennis Academy Logo"
               className={`w-auto object-contain transition-all duration-300 group-hover:scale-105 ${
-                scrolled ? "h-8 sm:h-12 md:h-14" : "h-10 sm:h-16 md:h-20 lg:h-22"
+                scrolled ? "h-14 sm:h-16 md:h-18" : "h-20 sm:h-24 md:h-28 lg:h-32"
               }`}
             />
           </a>
@@ -84,7 +84,7 @@ export default function Navbar({ onOpenBooking }) {
             <button
               type="button"
               onClick={onOpenBooking}
-              className="relative inline-flex items-center gap-2.5 px-5 py-2.5 bg-[#8DF000] text-white font-display text-xs sm:text-sm font-bold tracking-wider uppercase transition-all duration-200 hover:bg-white hover:text-[#050505] active:scale-95 group shadow-sm"
+              className="relative inline-flex items-center gap-2.5 px-5 py-2.5 bg-[#8DF000] text-[#050505] font-display text-xs sm:text-sm font-bold tracking-wider uppercase transition-all duration-200 hover:bg-white hover:text-[#050505] active:scale-95 group shadow-sm"
             >
               <span>BOOK A SESSION</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -140,7 +140,7 @@ export default function Navbar({ onOpenBooking }) {
                   setMobileMenuOpen(false);
                   onOpenBooking();
                 }}
-                className="w-full flex items-center justify-center gap-3 py-4 bg-[#8DF000] text-white font-display text-base font-bold tracking-wider uppercase"
+                className="w-full flex items-center justify-center gap-3 py-4 bg-[#8DF000] text-[#050505] font-display text-base font-bold tracking-wider uppercase"
               >
                 BOOK A SESSION NOW
                 <ArrowRight className="w-5 h-5" />

@@ -115,7 +115,7 @@ export default function BookingModal({ isOpen, onClose, preselectedProgramId }) 
                 <button
                   type="button"
                   onClick={handleReset}
-                  className="inline-flex items-center gap-3 px-8 py-3.5 bg-[#8DF000] text-white font-display text-sm tracking-wider uppercase font-bold hover:bg-white transition-colors"
+                  className="inline-flex items-center gap-3 px-8 py-3.5 bg-[#8DF000] text-[#050505] font-display text-sm tracking-wider uppercase font-bold hover:bg-white transition-colors"
                 >
                   Done // Return to Court
                 </button>
