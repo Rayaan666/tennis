@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Menu, X, Phone } from 'lucide-react';
 
-export default function Navbar({ onOpenBooking }) {
+export default function Navbar({ onOpenBooking, activePage = "HOME", onNavigate }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -20,13 +20,28 @@ export default function Navbar({ onOpenBooking }) {
   }, []);
 
   const navLinks = [
-    { name: "HOME", href: "#hero" },
-    { name: "ABOUT", href: "#about" },
-    { name: "PROGRAMS", href: "#programs" },
-    { name: "COACHES", href: "#coaches" },
-    { name: "GALLERY", href: "#gallery" },
-    { name: "CONTACT", href: "#contact" },
+    { name: "HOME", href: "/", targetHash: "#hero" },
+    { name: "ABOUT", href: "/about", targetHash: "#about-hero" },
+    { name: "PROGRAMS", href: "/#programs", targetHash: "#programs" },
+    { name: "COACHES", href: "/#coaches", targetHash: "#coaches" },
+    { name: "GALLERY", href: "/#gallery", targetHash: "#gallery" },
+    { name: "CONTACT", href: "/#contact", targetHash: "#contact" },
   ];
+
+  const handleLinkClick = (e, link) => {
+    if (onNavigate) {
+      e.preventDefault();
+      if (link.name === "ABOUT") {
+        onNavigate('/about');
+      } else if (link.name === "HOME") {
+        onNavigate('/');
+      } else {
+        // Sections on homepage
+        onNavigate(link.href);
+      }
+    }
+    setMobileMenuOpen(false);
+  };
 
   return (
     <>
@@ -40,7 +55,13 @@ export default function Navbar({ onOpenBooking }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Brand Logo */}
           <a
-            href="#hero"
+            href="/"
+            onClick={(e) => {
+              if (onNavigate) {
+                e.preventDefault();
+                onNavigate('/');
+              }
+            }}
             className="flex items-center group relative"
             aria-label="Lion Elite Tennis Academy Home"
           >
@@ -55,17 +76,26 @@ export default function Navbar({ onOpenBooking }) {
 
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center gap-8" aria-label="Main Navigation">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="relative font-display text-sm tracking-wider uppercase text-[#B9B9B9] hover:text-white transition-colors duration-200 py-1 group"
-              >
-                <span>{link.name}</span>
-                {/* Court-line hover interaction */}
-                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#8DF000] transition-all duration-300 group-hover:w-full" />
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = link.name === activePage;
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={(e) => handleLinkClick(e, link)}
+                  className={`relative font-display text-sm tracking-wider uppercase transition-colors duration-200 py-1 group ${
+                    isActive ? "text-[#8DF000] font-bold" : "text-[#B9B9B9] hover:text-white"
+                  }`}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  <span>{link.name}</span>
+                  {/* Court-line active/hover interaction */}
+                  <span className={`absolute bottom-0 left-0 h-[2px] bg-[#8DF000] transition-all duration-300 ${
+                    isActive ? "w-full" : "w-0 group-hover:w-full"
+                  }`} />
+                </a>
+              );
+            })}
           </nav>
 
           {/* Right Action CTA */}
@@ -119,17 +149,22 @@ export default function Navbar({ onOpenBooking }) {
                 NAVIGATION // COURT MENU
               </div>
               <div className="flex flex-col space-y-4">
-                {navLinks.map((link, idx) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="font-display text-2xl tracking-wider uppercase text-white hover:text-[#8DF000] transition-colors flex items-center justify-between border-b border-white/5 pb-2"
-                  >
-                    <span>{link.name}</span>
-                    <span className="font-mono text-xs text-[#8DF000]">0{idx + 1}</span>
-                  </a>
-                ))}
+                {navLinks.map((link, idx) => {
+                  const isActive = link.name === activePage;
+                  return (
+                    <a
+                      key={link.name}
+                      href={link.href}
+                      onClick={(e) => handleLinkClick(e, link)}
+                      className={`font-display text-2xl tracking-wider uppercase transition-colors flex items-center justify-between border-b border-white/5 pb-2 ${
+                        isActive ? "text-[#8DF000] font-bold" : "text-white hover:text-[#8DF000]"
+                      }`}
+                    >
+                      <span>{link.name}</span>
+                      <span className="font-mono text-xs text-[#8DF000]">0{idx + 1}</span>
+                    </a>
+                  );
+                })}
               </div>
             </div>
 

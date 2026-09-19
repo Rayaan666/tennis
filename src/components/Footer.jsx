@@ -1,15 +1,22 @@
 import React from 'react';
 import { ArrowUpRight, MapPin, Phone, Mail, MessageSquare } from 'lucide-react';
 
-export default function Footer({ onOpenBooking }) {
+export default function Footer({ onOpenBooking, onNavigate }) {
   const quickLinks = [
-    { name: "Home", href: "#hero" },
-    { name: "About", href: "#about" },
-    { name: "Programs", href: "#programs" },
-    { name: "Coaches", href: "#coaches" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Programs", href: "/#programs" },
+    { name: "Coaches", href: "/#coaches" },
+    { name: "Gallery", href: "/#gallery" },
+    { name: "Contact", href: "/#contact" },
   ];
+
+  const handleQuickLinkClick = (e, link) => {
+    if (onNavigate) {
+      e.preventDefault();
+      onNavigate(link.href);
+    }
+  };
 
   const programLinks = [
     { name: "Junior Development", id: "junior-dev" },
@@ -86,6 +93,7 @@ export default function Footer({ onOpenBooking }) {
                 <li key={link.name}>
                   <a
                     href={link.href}
+                    onClick={(e) => handleQuickLinkClick(e, link)}
                     className="text-[#B9B9B9] hover:text-[#8DF000] transition-colors flex items-center gap-2 group"
                   >
                     <span>{link.name}</span>
