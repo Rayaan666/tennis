@@ -23,8 +23,7 @@ export default function Navbar({ onOpenBooking, activePage = "HOME", onNavigate 
     { name: "HOME", href: "/", targetHash: "#hero" },
     { name: "ABOUT", href: "/about", targetHash: "#about-hero" },
     { name: "PROGRAMS", href: "/#programs", targetHash: "#programs" },
-    { name: "COACHES", href: "/#coaches", targetHash: "#coaches" },
-    { name: "GALLERY", href: "/#gallery", targetHash: "#gallery" },
+    { name: "LOCATIONS", href: "/locations", targetHash: "#locations" },
     { name: "CONTACT", href: "/#contact", targetHash: "#contact" },
   ];
 
@@ -35,6 +34,8 @@ export default function Navbar({ onOpenBooking, activePage = "HOME", onNavigate 
         onNavigate('/about');
       } else if (link.name === "HOME") {
         onNavigate('/');
+      } else if (link.name === "LOCATIONS") {
+        onNavigate('/locations');
       } else {
         // Sections on homepage
         onNavigate(link.href);
