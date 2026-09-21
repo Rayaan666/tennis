@@ -5,7 +5,7 @@ export default function Footer({ onOpenBooking, onNavigate }) {
   const quickLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Programs", href: "/#programs" },
+    { name: "Programs", href: "/programs" },
     { name: "Coaches", href: "/#coaches" },
     { name: "Gallery", href: "/#gallery" },
     { name: "Contact", href: "/#contact" },

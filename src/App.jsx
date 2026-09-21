@@ -12,6 +12,7 @@ import FinalCtaSection from './components/FinalCtaSection';
 import Footer from './components/Footer';
 import BookingModal from './components/BookingModal';
 import AboutPage from './components/about/AboutPage';
+import ProgramsPage from './components/programs/ProgramsPage';
 
 export default function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -23,6 +24,9 @@ export default function App() {
     const hash = window.location.hash.toLowerCase();
     if (path === '/about' || path.startsWith('/about/') || hash === '#about' || hash === '#/about') {
       return 'about';
+    }
+    if (path === '/programs' || path.startsWith('/programs/') || hash === '#programs' || hash === '#/programs') {
+      return 'programs';
     }
     return 'home';
   };
@@ -36,6 +40,8 @@ export default function App() {
       const hash = window.location.hash.toLowerCase();
       if (path === '/about' || path.startsWith('/about/') || hash === '#about' || hash === '#/about') {
         setCurrentPage('about');
+      } else if (path === '/programs' || path.startsWith('/programs/') || hash === '#programs' || hash === '#/programs') {
+        setCurrentPage('programs');
       } else {
         setCurrentPage('home');
       }
@@ -52,6 +58,12 @@ export default function App() {
         window.history.pushState({}, '', '/about');
       }
       setCurrentPage('about');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (target === '/programs' || target === '#programs' || target === '#programs-page') {
+      if (window.location.pathname !== '/programs') {
+        window.history.pushState({}, '', '/programs');
+      }
+      setCurrentPage('programs');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       // Home page route or section anchor
@@ -86,18 +98,24 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen bg-[#050505] text-[#F0F4F8] overflow-x-hidden selection:bg-[#8DF000] selection:text-[#050505]">
-      {/* Global Navigation - Shared across pages, ABOUT active on /about */}
+      {/* Global Navigation - Shared across pages */}
       <Navbar 
         onOpenBooking={() => handleOpenBooking("junior-dev")} 
-        activePage={currentPage === 'about' ? 'ABOUT' : 'HOME'}
+        activePage={currentPage === 'about' ? 'ABOUT' : currentPage === 'programs' ? 'PROGRAMS' : 'HOME'}
         onNavigate={handleNavigate}
       />
 
-      {/* Conditionally Render Dedicated About Page OR Complete Unmodified Homepage */}
+      {/* Conditionally Render Dedicated About Page, Programs Page, OR Complete Unmodified Homepage */}
       {currentPage === 'about' ? (
         /* DEDICATED ABOUT PAGE AT /about (11 Editorial Sections) */
         <AboutPage 
           onOpenBooking={handleOpenBooking} 
+          onNavigate={handleNavigate}
+        />
+      ) : currentPage === 'programs' ? (
+        /* DEDICATED PROGRAMS PAGE AT /programs (Compact 5-Section Architecture) */
+        <ProgramsPage
+          onOpenBooking={handleOpenBooking}
           onNavigate={handleNavigate}
         />
       ) : (
