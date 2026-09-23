@@ -6,6 +6,7 @@ export default function Footer({ onOpenBooking, onNavigate }) {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Programs", href: "/programs" },
+    { name: "Locations", href: "/locations" },
     { name: "Coaches", href: "/#coaches" },
     { name: "Gallery", href: "/#gallery" },
     { name: "Contact", href: "/#contact" },

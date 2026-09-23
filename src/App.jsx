@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import BookingModal from './components/BookingModal';
 import AboutPage from './components/about/AboutPage';
 import ProgramsPage from './components/programs/ProgramsPage';
+import LocationsPage from './components/locations/LocationsPage';
 
 export default function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -28,6 +29,9 @@ export default function App() {
     if (path === '/programs' || path.startsWith('/programs/') || hash === '#programs' || hash === '#/programs') {
       return 'programs';
     }
+    if (path === '/locations' || path.startsWith('/locations/') || hash === '#locations' || hash === '#/locations') {
+      return 'locations';
+    }
     return 'home';
   };
 
@@ -42,6 +46,8 @@ export default function App() {
         setCurrentPage('about');
       } else if (path === '/programs' || path.startsWith('/programs/') || hash === '#programs' || hash === '#/programs') {
         setCurrentPage('programs');
+      } else if (path === '/locations' || path.startsWith('/locations/') || hash === '#locations' || hash === '#/locations') {
+        setCurrentPage('locations');
       } else {
         setCurrentPage('home');
       }
@@ -64,6 +70,12 @@ export default function App() {
         window.history.pushState({}, '', '/programs');
       }
       setCurrentPage('programs');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (target === '/locations' || target === '#locations' || target === '#locations-page') {
+      if (window.location.pathname !== '/locations') {
+        window.history.pushState({}, '', '/locations');
+      }
+      setCurrentPage('locations');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       // Home page route or section anchor
@@ -101,11 +113,19 @@ export default function App() {
       {/* Global Navigation - Shared across pages */}
       <Navbar 
         onOpenBooking={() => handleOpenBooking("junior-dev")} 
-        activePage={currentPage === 'about' ? 'ABOUT' : currentPage === 'programs' ? 'PROGRAMS' : 'HOME'}
+        activePage={
+          currentPage === 'about' 
+            ? 'ABOUT' 
+            : currentPage === 'programs' 
+            ? 'PROGRAMS' 
+            : currentPage === 'locations'
+            ? 'LOCATIONS'
+            : 'HOME'
+        }
         onNavigate={handleNavigate}
       />
 
-      {/* Conditionally Render Dedicated About Page, Programs Page, OR Complete Unmodified Homepage */}
+      {/* Conditionally Render Dedicated About Page, Programs Page, Dedicated Locations Page, OR Complete Unmodified Homepage */}
       {currentPage === 'about' ? (
         /* DEDICATED ABOUT PAGE AT /about (11 Editorial Sections) */
         <AboutPage 
@@ -115,6 +135,12 @@ export default function App() {
       ) : currentPage === 'programs' ? (
         /* DEDICATED PROGRAMS PAGE AT /programs (Compact 5-Section Architecture) */
         <ProgramsPage
+          onOpenBooking={handleOpenBooking}
+          onNavigate={handleNavigate}
+        />
+      ) : currentPage === 'locations' ? (
+        /* DEDICATED LOCATIONS PAGE AT /locations (Distinctive 4-Section Architecture) */
+        <LocationsPage
           onOpenBooking={handleOpenBooking}
           onNavigate={handleNavigate}
         />
