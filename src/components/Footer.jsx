@@ -9,7 +9,7 @@ export default function Footer({ onOpenBooking, onNavigate }) {
     { name: "Locations", href: "/locations" },
     { name: "Coaches", href: "/#coaches" },
     { name: "Gallery", href: "/#gallery" },
-    { name: "Contact", href: "/#contact" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const handleQuickLinkClick = (e, link) => {

@@ -24,7 +24,7 @@ export default function Navbar({ onOpenBooking, activePage = "HOME", onNavigate 
     { name: "ABOUT", href: "/about", targetHash: "#about-hero" },
     { name: "PROGRAMS", href: "/programs", targetHash: "#programs-hero" },
     { name: "LOCATIONS", href: "/locations", targetHash: "#locations" },
-    { name: "CONTACT", href: "/#contact", targetHash: "#contact" },
+    { name: "CONTACT", href: "/contact", targetHash: "#contact" },
   ];
 
   const handleLinkClick = (e, link) => {
@@ -38,6 +38,8 @@ export default function Navbar({ onOpenBooking, activePage = "HOME", onNavigate 
         onNavigate('/programs');
       } else if (link.name === "LOCATIONS") {
         onNavigate('/locations');
+      } else if (link.name === "CONTACT") {
+        onNavigate('/contact');
       } else {
         // Sections on homepage
         onNavigate(link.href);
@@ -72,7 +74,7 @@ export default function Navbar({ onOpenBooking, activePage = "HOME", onNavigate 
               src="/logo.png"
               alt="Lion Elite Tennis Academy Logo"
               className={`w-auto object-contain transition-all duration-300 group-hover:scale-105 ${
-                scrolled ? "h-14 sm:h-16 md:h-18" : "h-20 sm:h-24 md:h-28 lg:h-32"
+                scrolled ? "h-12 sm:h-14 md:h-16" : "h-16 sm:h-20 md:h-22 lg:h-24"
               }`}
             />
           </a>
